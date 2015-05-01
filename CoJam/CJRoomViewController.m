@@ -50,7 +50,12 @@ static NSString* const CJSearchResultTableViewCellIdentifier = @"CJSearchResultT
     UIBarButtonItem *addSong = [[UIBarButtonItem alloc]
                                 initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                 target:self action:@selector(showSearchView)];
-    self.navigationItem.rightBarButtonItem = addSong;
+    
+    UIBarButtonItem *shareView = [[UIBarButtonItem alloc]
+                                initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                target:self action:nil];
+    
+    self.navigationItem.rightBarButtonItems = @[addSong, shareView];
 
 }
 
@@ -132,7 +137,7 @@ static NSString* const CJSearchResultTableViewCellIdentifier = @"CJSearchResultT
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 75;
+    return 50;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -102,8 +102,13 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
     UIBarButtonItem *addRoom = [[UIBarButtonItem alloc]
                                 initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                 target:self action:@selector(addRoom)];
-    addRoom.tintColor = [CJColors altColorB];
+    
+    UIBarButtonItem *searchRoom = [[UIBarButtonItem alloc]
+                                initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
+                                target:self action:nil];
+    
     self.navigationItem.rightBarButtonItem = addRoom;
+    self.navigationItem.leftBarButtonItem = searchRoom;
     
 }
 
