@@ -9,6 +9,7 @@
 #import "CJFindSongView.h"
 #import "CJSpotifyHelper.h"
 #import "CJSearchResultTableViewCell.h"
+#import "CJColors.h"
 
 static NSString* const CJSearchResultTableViewCellIdentifier = @"CJSearchResultTableViewCell";
 
@@ -19,13 +20,16 @@ static NSString* const CJSearchResultTableViewCellIdentifier = @"CJSearchResultT
         _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0,0,frame.size.width,50)];
         _searchBar.delegate = self;
         _searchBar.placeholder = @"Enter a song, artist, or album...";
+        _searchBar.showsCancelButton = YES;
+        _searchBar.barTintColor = [CJColors backgroundColorA];
+        _searchBar.tintColor = [CJColors altColorB];
         
         [_tableView registerClass:[CJSearchResultTableViewCell class]
            forCellReuseIdentifier:CJSearchResultTableViewCellIdentifier];
         
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 50,
                                                                    frame.size.width,
-                                                                   frame.size.height - 150)];
+                                                                   frame.size.height - 50)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         
@@ -43,6 +47,10 @@ static NSString* const CJSearchResultTableViewCellIdentifier = @"CJSearchResultT
                                                            [_tableView reloadData];   
                                                        }
     }];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    [_delegate removeSearchView];
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
@@ -69,18 +77,9 @@ static NSString* const CJSearchResultTableViewCellIdentifier = @"CJSearchResultT
     
     SPTPartialTrack *track = _results[indexPath.row];
     cell.songTitle.text = track.name;
-    cell.artists.text = getArtistString(track.artists);
+    cell.artists.text = [CJSpotifyHelper getArtistStringForArtistList:track.artists];
     
     return cell;
-}
-
-static NSString *getArtistString(NSArray *artists) {
-    NSMutableArray *artistNames = [[NSMutableArray alloc]
-                                   initWithCapacity:[artists count]];
-    [artists enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [artistNames addObject:((SPTPartialArtist*)obj).name];
-    }];
-    return [artistNames componentsJoinedByString:@", "];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

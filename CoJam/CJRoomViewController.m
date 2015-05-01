@@ -9,6 +9,10 @@
 #import "CJRoomViewController.h"
 #import "CJColors.h"
 #import "CJSpotifyHelper.h"
+#import "CJSearchResultTableViewCell.h"
+#import <MBProgressHUD/MBProgressHUD.h>
+
+static NSString* const CJSearchResultTableViewCellIdentifier = @"CJSearchResultTableViewCell";
 
 @interface CJRoomViewController ()
 
@@ -22,22 +26,22 @@
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    self.view.backgroundColor = [CJColors backgroundColorA];
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    _tableView.backgroundColor = [UIColor whiteColor];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.rowHeight = 50;
     [self.view addSubview: _tableView];
     
-    //[_tableView registerClass:[CJRoomListTableViewCell class]
-    //       forCellReuseIdentifier:CJRoomListTableViewCellIdentifier];
+    [_tableView registerClass:[CJSearchResultTableViewCell class]
+       forCellReuseIdentifier:CJSearchResultTableViewCellIdentifier];
     
-    //CJSpotifyHelper *helper = [CJSpotifyHelper defaultHelper];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     [self initNavbar];
-    
-    self.view.backgroundColor = [CJColors backgroundColorA];
-    _tableView.backgroundColor = [UIColor whiteColor];
+    [self refresh];
 
 }
 
@@ -51,7 +55,24 @@
 }
 
 - (void) refresh {
-    
+    [_room fetchInBackgroundWithBlock:^(PFObject *result, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error);
+        }
+        [[CJSpotifyHelper defaultHelper]
+         getTracksWithURIs:_room.queue
+         andBlock:^(NSArray *results, NSError *error) {
+             if (error) {
+                 NSLog(@"%@", error);
+             } else {
+                 _queue = results;
+                 dispatch_async(dispatch_get_main_queue(), ^{
+                     [_tableView reloadData];
+                     [MBProgressHUD hideHUDForView:self.view animated:YES];
+                 });
+             }
+        }];
+    }];
 }
 
 - (void) didSelectSong:(SPTPartialTrack *)song {
@@ -60,16 +81,20 @@
         if (error != nil) {
             NSLog(@"%@", error);
         }
-        [UIView animateWithDuration:.25
-                         animations:^{
-                             _findSongView.frame = CGRectOffset(self.view.frame,
-                                                                0, self.view.frame.size.height);
-                         }
-                         completion:^(BOOL finished){
-                             [_findSongView removeFromSuperview];
-                             [self refresh];
-                         }];
+        [self refresh];
+        [self removeSearchView];
     }];
+}
+
+- (void) removeSearchView {
+    [UIView animateWithDuration:.25
+                     animations:^{
+                         _findSongView.frame = CGRectOffset(self.view.frame,
+                                                            0, self.view.frame.size.height);
+                     }
+                     completion:^(BOOL finished){
+                         [_findSongView removeFromSuperview];
+                     }];
 }
 
 - (void) showSearchView {
@@ -107,19 +132,32 @@
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
+    return 75;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [_queue count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    CJSearchResultTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:
+                                         CJSearchResultTableViewCellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[CJSearchResultTableViewCell alloc]
+                initWithStyle:UITableViewCellStyleDefault
+                reuseIdentifier:CJSearchResultTableViewCellIdentifier];
+    }
+    
+    SPTPartialTrack *track = _queue[indexPath.row];
+    cell.songTitle.text = track.name;
+    cell.artists.text = [CJSpotifyHelper getArtistStringForArtistList:track.artists];
+    
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+
 }
 
 -(UIStatusBarStyle) preferredStatusBarStyle{

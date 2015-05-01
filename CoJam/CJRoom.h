@@ -15,6 +15,6 @@
 @property (strong, nonatomic) NSString *displayName;
 @property (strong, nonatomic) NSString *idNumber;
 @property (strong, nonatomic, readonly) PFRelation *members;
-@property (strong, nonatomic) NSMutableArray *queue;
+@property (strong, nonatomic) NSArray *queue;
 
 @end

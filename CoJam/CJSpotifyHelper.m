@@ -22,6 +22,35 @@ static CJSpotifyHelper *defaultHelper;
     }
 }
 
++ (NSString *) getArtistStringForArtistList:(NSArray *)artists {
+    NSMutableArray *artistNames = [[NSMutableArray alloc]
+                                   initWithCapacity:[artists count]];
+    [artists enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [artistNames addObject:((SPTPartialArtist*)obj).name];
+    }];
+    return [artistNames componentsJoinedByString:@", "];
+}
+
+static NSArray *getURLsFromStrings(NSArray *strings) {
+    NSMutableArray *result = [[NSMutableArray alloc]
+                              initWithCapacity:[strings count]];
+    [strings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [result addObject:[NSURL URLWithString:(NSString*)obj]];
+    }];
+    return result;
+}
+
+- (void) getTracksWithURIs:(NSArray*)uris
+                  andBlock:(void (^)(NSArray *results,
+                                     NSError *error)) block {
+    
+    [SPTTrack tracksWithURIs:getURLsFromStrings(uris)
+                     session:_session
+                    callback:^(NSError *error, id result) {
+        return block((NSArray*)result, error);
+    }];
+}
+
 - (void) performSearchWithQuery:(NSString *)query
                        andBlock:(void (^)(NSArray *results, NSError *error)) block {
     

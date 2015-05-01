@@ -13,6 +13,7 @@
 
 @required
 - (void) didSelectSong:(SPTPartialTrack*)song;
+- (void) removeSearchView;
 
 @end
 

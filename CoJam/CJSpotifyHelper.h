@@ -28,11 +28,19 @@
 
 + (CJSpotifyHelper *) defaultHelper;
 
++ (NSString *) getArtistStringForArtistList:(NSArray *)artists;
+
 - (void) attemptToReauthenticateWithBlock:(void (^)(BOOL success,
                                                     NSError *error)) block;
 
 - (void) performSearchWithQuery:(NSString *)query
                        andBlock:(void (^)(NSArray *results,
                                           NSError *error)) block;
+
+- (void) getTracksWithURIs:(NSArray*)uris
+                  andBlock:(void (^)(NSArray *results,
+                                     NSError *error)) block;
+
+
 
 @end

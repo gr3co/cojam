@@ -15,6 +15,7 @@
 
 @property CJRoom *room;
 @property UITableView *tableView;
+@property NSArray *queue;
 
 - (void) refresh;
 

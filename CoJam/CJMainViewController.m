@@ -152,9 +152,10 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
         NSLog(@"Found %i room(s)", (int)[objects count]);
         _rooms = [[NSArray alloc] initWithArray:objects];
         
-        [_tableView reloadData];
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_tableView reloadData];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
     }];
 }
 
