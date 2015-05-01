@@ -11,6 +11,7 @@
 
 @implementation CJRoom
 @dynamic creator;
+@dynamic isActive;
 @dynamic displayName;
 @dynamic idNumber;
 @dynamic members;

@@ -55,6 +55,7 @@
     CJRoom *newRoom = [CJRoom object];
     newRoom.creator = [CJUser currentUser];
     newRoom.displayName = _nameInput.text;
+    newRoom.isActive = YES;
     [newRoom.members addObject:[PFUser currentUser]];
     [newRoom saveInBackgroundWithBlock:^(BOOL success, NSError *error) {
         if (error) {

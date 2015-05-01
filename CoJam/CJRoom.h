@@ -11,10 +11,11 @@
 
 @interface CJRoom : PFObject<PFSubclassing>
 
+@property BOOL isActive;
 @property (strong, nonatomic) CJUser *creator;
 @property (strong, nonatomic) NSString *displayName;
 @property (strong, nonatomic) NSString *idNumber;
-@property (strong, nonatomic, readonly) PFRelation *members;
 @property (strong, nonatomic) NSArray *queue;
+@property (strong, nonatomic, readonly) PFRelation *members;
 
 @end

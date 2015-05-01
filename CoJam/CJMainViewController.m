@@ -51,6 +51,7 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
     
     _roomsQuery = [PFQuery queryWithClassName:@"Room"];
     [_roomsQuery whereKey:@"members" equalTo:[PFUser currentUser]];
+    [_roomsQuery whereKey:@"isActive" equalTo:@YES];
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
