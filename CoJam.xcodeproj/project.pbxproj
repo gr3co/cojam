@@ -11,6 +11,8 @@
 		A82896271AEA29C700ABA175 /* CJNewRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A82896261AEA29C700ABA175 /* CJNewRoomView.m */; };
 		A828962A1AEA413300ABA175 /* CJRoomListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A82896291AEA413300ABA175 /* CJRoomListTableViewCell.m */; };
 		A828962D1AEB162D00ABA175 /* CJRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A828962C1AEB162D00ABA175 /* CJRoomViewController.m */; };
+		A82F91C91AF314A000C1E25A /* CJFindSongView.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F91C81AF314A000C1E25A /* CJFindSongView.m */; };
+		A82F91CC1AF31C6200C1E25A /* CJSearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F91CB1AF31C6200C1E25A /* CJSearchResultTableViewCell.m */; };
 		A8AD44961AE9D00900E6F060 /* CJColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44951AE9D00900E6F060 /* CJColors.m */; };
 		A8AD449B1AE9D7BD00E6F060 /* CJSpotifyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD449A1AE9D7BD00E6F060 /* CJSpotifyHelper.m */; };
 		A8AD44AC1AEA00D800E6F060 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44A51AEA00D800E6F060 /* Bolts.framework */; };
@@ -47,6 +49,10 @@
 		A82896291AEA413300ABA175 /* CJRoomListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRoomListTableViewCell.m; sourceTree = "<group>"; };
 		A828962B1AEB162D00ABA175 /* CJRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRoomViewController.h; sourceTree = "<group>"; };
 		A828962C1AEB162D00ABA175 /* CJRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRoomViewController.m; sourceTree = "<group>"; };
+		A82F91C71AF314A000C1E25A /* CJFindSongView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFindSongView.h; sourceTree = "<group>"; };
+		A82F91C81AF314A000C1E25A /* CJFindSongView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFindSongView.m; sourceTree = "<group>"; };
+		A82F91CA1AF31C6200C1E25A /* CJSearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSearchResultTableViewCell.h; sourceTree = "<group>"; };
+		A82F91CB1AF31C6200C1E25A /* CJSearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSearchResultTableViewCell.m; sourceTree = "<group>"; };
 		A8AD44941AE9D00900E6F060 /* CJColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJColors.h; sourceTree = "<group>"; };
 		A8AD44951AE9D00900E6F060 /* CJColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJColors.m; sourceTree = "<group>"; };
 		A8AD44991AE9D7BD00E6F060 /* CJSpotifyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSpotifyHelper.h; sourceTree = "<group>"; };
@@ -135,6 +141,8 @@
 		A8AD44981AE9D05300E6F060 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A82F91C71AF314A000C1E25A /* CJFindSongView.h */,
+				A82F91C81AF314A000C1E25A /* CJFindSongView.m */,
 				A8EF55171AE9C73D001FF4FE /* CJMainViewController.h */,
 				A8EF55181AE9C73D001FF4FE /* CJMainViewController.m */,
 				A82896251AEA29C700ABA175 /* CJNewRoomView.h */,
@@ -150,6 +158,8 @@
 			children = (
 				A82896281AEA413300ABA175 /* CJRoomListTableViewCell.h */,
 				A82896291AEA413300ABA175 /* CJRoomListTableViewCell.m */,
+				A82F91CA1AF31C6200C1E25A /* CJSearchResultTableViewCell.h */,
+				A82F91CB1AF31C6200C1E25A /* CJSearchResultTableViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -157,10 +167,10 @@
 		A8AD44CD1AEA0EF900E6F060 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A8AD44CE1AEA0F3E00E6F060 /* CJUser.h */,
-				A8AD44CF1AEA0F3E00E6F060 /* CJUser.m */,
 				A8AD44D11AEA208800E6F060 /* CJRoom.h */,
 				A8AD44D21AEA208800E6F060 /* CJRoom.m */,
+				A8AD44CE1AEA0F3E00E6F060 /* CJUser.h */,
+				A8AD44CF1AEA0F3E00E6F060 /* CJUser.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -338,9 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8AD44961AE9D00900E6F060 /* CJColors.m in Sources */,
+				A82F91CC1AF31C6200C1E25A /* CJSearchResultTableViewCell.m in Sources */,
 				A8AD44D01AEA0F3E00E6F060 /* CJUser.m in Sources */,
 				A8EF55191AE9C73D001FF4FE /* CJMainViewController.m in Sources */,
 				A8AD44D31AEA208800E6F060 /* CJRoom.m in Sources */,
+				A82F91C91AF314A000C1E25A /* CJFindSongView.m in Sources */,
 				A828962D1AEB162D00ABA175 /* CJRoomViewController.m in Sources */,
 				A8EF55161AE9C73D001FF4FE /* AppDelegate.m in Sources */,
 				A828962A1AEA413300ABA175 /* CJRoomListTableViewCell.m in Sources */,

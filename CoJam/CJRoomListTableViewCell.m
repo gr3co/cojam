@@ -29,10 +29,9 @@
     float width = self.contentView.frame.size.width;
     
     _displayName = [[UILabel alloc] initWithFrame:CGRectMake(0.1 * width, 0, 0.8 * width, height)];
-    _displayName.numberOfLines = 0;
+    _displayName.numberOfLines = 1;
     _displayName.font = [UIFont fontWithName:@"Avenir" size:20];
     _displayName.textColor = [CJColors altColorA];
-    _displayName.lineBreakMode = NSLineBreakByWordWrapping;
     
     [self.contentView addSubview:_displayName];
 }

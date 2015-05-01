@@ -22,6 +22,21 @@ static CJSpotifyHelper *defaultHelper;
     }
 }
 
+- (void) performSearchWithQuery:(NSString *)query
+                       andBlock:(void (^)(NSArray *results, NSError *error)) block {
+    
+    [SPTRequest performSearchWithQuery:query
+                             queryType:SPTQueryTypeTrack
+                               session:_session
+                              callback:^(NSError *error, id result) {
+                                  
+                                  SPTListPage *page = (SPTListPage*) result;
+                                  return block(page.items, error);
+                                  
+                              }];
+    
+}
+
 - (void) attemptToReauthenticateWithBlock:(void (^)(BOOL success, NSError *error)) block {
     
     CJUser *user = [CJUser currentUser];

@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CJRoom.h"
+#import "CJFindSongView.h"
 
 @interface CJRoomViewController : UIViewController
-<UITableViewDataSource, UITableViewDelegate>
+<UITableViewDataSource, UITableViewDelegate, CJFindSongViewDelegate>
 
 @property CJRoom *room;
 @property UITableView *tableView;

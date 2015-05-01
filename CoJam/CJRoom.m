@@ -21,7 +21,7 @@
 }
 
 + (NSString *) parseClassName {
-    return @"CJRoom";
+    return @"Room";
 }
 
 @end

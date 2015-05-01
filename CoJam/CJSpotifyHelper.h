@@ -28,7 +28,11 @@
 
 + (CJSpotifyHelper *) defaultHelper;
 
-- (void) attemptToReauthenticateWithBlock:(void (^)(BOOL success, NSError *error)) block;
+- (void) attemptToReauthenticateWithBlock:(void (^)(BOOL success,
+                                                    NSError *error)) block;
 
+- (void) performSearchWithQuery:(NSString *)query
+                       andBlock:(void (^)(NSArray *results,
+                                          NSError *error)) block;
 
 @end

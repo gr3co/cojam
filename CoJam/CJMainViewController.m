@@ -14,6 +14,7 @@
 #import "CJRoomViewController.h"
 
 #import <Parse/Parse.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableViewCell";
 
@@ -33,8 +34,10 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    self.view.backgroundColor = [CJColors backgroundColorA];
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    _tableView.backgroundColor = [UIColor whiteColor];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.rowHeight = 75;
@@ -46,8 +49,10 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
     CJSpotifyHelper *helper = [CJSpotifyHelper defaultHelper];
     helper.delegate = self;
     
-    _roomsQuery = [PFQuery queryWithClassName:@"CJRoom"];
+    _roomsQuery = [PFQuery queryWithClassName:@"Room"];
     [_roomsQuery whereKey:@"members" equalTo:[PFUser currentUser]];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     [helper attemptToReauthenticateWithBlock:^(BOOL success, NSError *error) {
         if (error) {
@@ -69,9 +74,6 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
     }];
     
     [self initNavbar];
-    
-    self.view.backgroundColor = [CJColors backgroundColorA];
-    _tableView.backgroundColor = [UIColor whiteColor];
     
 }
 
@@ -133,7 +135,6 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
 }
 
 - (void) newRoomCreated:(CJRoom *)room {
-    NSLog(@"%@", room.idNumber);
     [_backgroundTint removeFromSuperview];
     _backgroundTint = nil;
     _createRoomForm = nil;
@@ -141,6 +142,9 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
 }
 
 - (void) refresh {
+    if ([MBProgressHUD HUDForView:self.view] == nil) {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    }
     [_roomsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error != nil) {
             NSLog(@"%@", [error localizedDescription]);
@@ -149,6 +153,7 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
         _rooms = [[NSArray alloc] initWithArray:objects];
         
         [_tableView reloadData];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         
     }];
 }
