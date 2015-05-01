@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "CoJam": {
+      "applicationId": "waRB2NWEkLHS0y1OezpmRZFhI8vSbnGm0uznT9tC",
+      "masterKey": "V3OATLPozloUft3BrqOrqaS2Jb3tLZeUvCAX2GXe"
+    },
+    "_default": {
+      "link": "CoJam"
+    }
+  }
+}

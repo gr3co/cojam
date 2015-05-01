@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E829E21CBF54D02AB663345 /* libPods-CoJam.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD369153FC85DD08E6CC1FF /* libPods-CoJam.a */; };
+		A82896271AEA29C700ABA175 /* CJNewRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A82896261AEA29C700ABA175 /* CJNewRoomView.m */; };
+		A828962A1AEA413300ABA175 /* CJRoomListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A82896291AEA413300ABA175 /* CJRoomListTableViewCell.m */; };
+		A828962D1AEB162D00ABA175 /* CJRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A828962C1AEB162D00ABA175 /* CJRoomViewController.m */; };
+		A8AD44961AE9D00900E6F060 /* CJColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44951AE9D00900E6F060 /* CJColors.m */; };
+		A8AD449B1AE9D7BD00E6F060 /* CJSpotifyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD449A1AE9D7BD00E6F060 /* CJSpotifyHelper.m */; };
+		A8AD44AC1AEA00D800E6F060 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44A51AEA00D800E6F060 /* Bolts.framework */; };
+		A8AD44AD1AEA00D800E6F060 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44A61AEA00D800E6F060 /* Parse.framework */; };
+		A8AD44B11AEA00D800E6F060 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44AA1AEA00D800E6F060 /* ParseUI.framework */; };
+		A8AD44B21AEA00D800E6F060 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44AB1AEA00D800E6F060 /* Spotify.framework */; };
+		A8AD44B41AEA00EB00E6F060 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44B31AEA00EB00E6F060 /* AudioToolbox.framework */; };
+		A8AD44B61AEA00F800E6F060 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44B51AEA00F800E6F060 /* CFNetwork.framework */; };
+		A8AD44B81AEA010100E6F060 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44B71AEA010100E6F060 /* CoreGraphics.framework */; };
+		A8AD44BA1AEA010800E6F060 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44B91AEA010800E6F060 /* CoreLocation.framework */; };
+		A8AD44BC1AEA011200E6F060 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44BB1AEA011200E6F060 /* MobileCoreServices.framework */; };
+		A8AD44BE1AEA011B00E6F060 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44BD1AEA011B00E6F060 /* QuartzCore.framework */; };
+		A8AD44C01AEA012200E6F060 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44BF1AEA012200E6F060 /* Security.framework */; };
+		A8AD44C21AEA012900E6F060 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44C11AEA012900E6F060 /* StoreKit.framework */; };
+		A8AD44C41AEA013200E6F060 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44C31AEA013100E6F060 /* SystemConfiguration.framework */; };
+		A8AD44C61AEA013900E6F060 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44C51AEA013900E6F060 /* libz.dylib */; };
+		A8AD44C81AEA014000E6F060 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44C71AEA014000E6F060 /* libsqlite3.dylib */; };
+		A8AD44CA1AEA014800E6F060 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44C91AEA014800E6F060 /* Accounts.framework */; };
+		A8AD44CC1AEA014E00E6F060 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44CB1AEA014E00E6F060 /* Social.framework */; };
+		A8AD44D01AEA0F3E00E6F060 /* CJUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44CF1AEA0F3E00E6F060 /* CJUser.m */; };
+		A8AD44D31AEA208800E6F060 /* CJRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44D21AEA208800E6F060 /* CJRoom.m */; };
+		A8EF55131AE9C73D001FF4FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EF55121AE9C73D001FF4FE /* main.m */; };
+		A8EF55161AE9C73D001FF4FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EF55151AE9C73D001FF4FE /* AppDelegate.m */; };
+		A8EF55191AE9C73D001FF4FE /* CJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EF55181AE9C73D001FF4FE /* CJMainViewController.m */; };
+		A8EF551E1AE9C73D001FF4FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8EF551D1AE9C73D001FF4FE /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9F6ED6B51C072B42699A6A8F /* Pods-CoJam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoJam/Pods-CoJam.debug.xcconfig"; sourceTree = "<group>"; };
+		9FD369153FC85DD08E6CC1FF /* libPods-CoJam.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoJam.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A82896251AEA29C700ABA175 /* CJNewRoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJNewRoomView.h; sourceTree = "<group>"; };
+		A82896261AEA29C700ABA175 /* CJNewRoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJNewRoomView.m; sourceTree = "<group>"; };
+		A82896281AEA413300ABA175 /* CJRoomListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRoomListTableViewCell.h; sourceTree = "<group>"; };
+		A82896291AEA413300ABA175 /* CJRoomListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRoomListTableViewCell.m; sourceTree = "<group>"; };
+		A828962B1AEB162D00ABA175 /* CJRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRoomViewController.h; sourceTree = "<group>"; };
+		A828962C1AEB162D00ABA175 /* CJRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRoomViewController.m; sourceTree = "<group>"; };
+		A8AD44941AE9D00900E6F060 /* CJColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJColors.h; sourceTree = "<group>"; };
+		A8AD44951AE9D00900E6F060 /* CJColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJColors.m; sourceTree = "<group>"; };
+		A8AD44991AE9D7BD00E6F060 /* CJSpotifyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSpotifyHelper.h; sourceTree = "<group>"; };
+		A8AD449A1AE9D7BD00E6F060 /* CJSpotifyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSpotifyHelper.m; sourceTree = "<group>"; };
+		A8AD44A51AEA00D800E6F060 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
+		A8AD44A61AEA00D800E6F060 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
+		A8AD44AA1AEA00D800E6F060 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = "<group>"; };
+		A8AD44AB1AEA00D800E6F060 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spotify.framework; path = Frameworks/Spotify.framework; sourceTree = "<group>"; };
+		A8AD44B31AEA00EB00E6F060 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A8AD44B51AEA00F800E6F060 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A8AD44B71AEA010100E6F060 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A8AD44B91AEA010800E6F060 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A8AD44BB1AEA011200E6F060 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A8AD44BD1AEA011B00E6F060 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A8AD44BF1AEA012200E6F060 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A8AD44C11AEA012900E6F060 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A8AD44C31AEA013100E6F060 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A8AD44C51AEA013900E6F060 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A8AD44C71AEA014000E6F060 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		A8AD44C91AEA014800E6F060 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		A8AD44CB1AEA014E00E6F060 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A8AD44CE1AEA0F3E00E6F060 /* CJUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJUser.h; sourceTree = "<group>"; };
+		A8AD44CF1AEA0F3E00E6F060 /* CJUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJUser.m; sourceTree = "<group>"; };
+		A8AD44D11AEA208800E6F060 /* CJRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRoom.h; sourceTree = "<group>"; };
+		A8AD44D21AEA208800E6F060 /* CJRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRoom.m; sourceTree = "<group>"; };
+		A8EF550D1AE9C73D001FF4FE /* CoJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8EF55111AE9C73D001FF4FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8EF55121AE9C73D001FF4FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A8EF55141AE9C73D001FF4FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A8EF55151AE9C73D001FF4FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A8EF55171AE9C73D001FF4FE /* CJMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJMainViewController.h; sourceTree = "<group>"; };
+		A8EF55181AE9C73D001FF4FE /* CJMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJMainViewController.m; sourceTree = "<group>"; };
+		A8EF551D1AE9C73D001FF4FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB5071E0186421FB937010D4 /* Pods-CoJam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJam.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoJam/Pods-CoJam.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8EF550A1AE9C73D001FF4FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8AD44CC1AEA014E00E6F060 /* Social.framework in Frameworks */,
+				A8AD44CA1AEA014800E6F060 /* Accounts.framework in Frameworks */,
+				A8AD44C81AEA014000E6F060 /* libsqlite3.dylib in Frameworks */,
+				A8AD44C61AEA013900E6F060 /* libz.dylib in Frameworks */,
+				A8AD44C41AEA013200E6F060 /* SystemConfiguration.framework in Frameworks */,
+				A8AD44C21AEA012900E6F060 /* StoreKit.framework in Frameworks */,
+				A8AD44C01AEA012200E6F060 /* Security.framework in Frameworks */,
+				A8AD44BE1AEA011B00E6F060 /* QuartzCore.framework in Frameworks */,
+				A8AD44BC1AEA011200E6F060 /* MobileCoreServices.framework in Frameworks */,
+				A8AD44BA1AEA010800E6F060 /* CoreLocation.framework in Frameworks */,
+				A8AD44B81AEA010100E6F060 /* CoreGraphics.framework in Frameworks */,
+				A8AD44B61AEA00F800E6F060 /* CFNetwork.framework in Frameworks */,
+				A8AD44B41AEA00EB00E6F060 /* AudioToolbox.framework in Frameworks */,
+				A8AD44B11AEA00D800E6F060 /* ParseUI.framework in Frameworks */,
+				A8AD44AD1AEA00D800E6F060 /* Parse.framework in Frameworks */,
+				A8AD44B21AEA00D800E6F060 /* Spotify.framework in Frameworks */,
+				A8AD44AC1AEA00D800E6F060 /* Bolts.framework in Frameworks */,
+				1E829E21CBF54D02AB663345 /* libPods-CoJam.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A40D89AE5E1CCB02D780195 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F6ED6B51C072B42699A6A8F /* Pods-CoJam.debug.xcconfig */,
+				CB5071E0186421FB937010D4 /* Pods-CoJam.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A8AD44971AE9D04500E6F060 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A8AD44941AE9D00900E6F060 /* CJColors.h */,
+				A8AD44951AE9D00900E6F060 /* CJColors.m */,
+				A8AD44991AE9D7BD00E6F060 /* CJSpotifyHelper.h */,
+				A8AD449A1AE9D7BD00E6F060 /* CJSpotifyHelper.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		A8AD44981AE9D05300E6F060 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8EF55171AE9C73D001FF4FE /* CJMainViewController.h */,
+				A8EF55181AE9C73D001FF4FE /* CJMainViewController.m */,
+				A82896251AEA29C700ABA175 /* CJNewRoomView.h */,
+				A82896261AEA29C700ABA175 /* CJNewRoomView.m */,
+				A828962B1AEB162D00ABA175 /* CJRoomViewController.h */,
+				A828962C1AEB162D00ABA175 /* CJRoomViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A8AD449F1AE9EFB500E6F060 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A82896281AEA413300ABA175 /* CJRoomListTableViewCell.h */,
+				A82896291AEA413300ABA175 /* CJRoomListTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		A8AD44CD1AEA0EF900E6F060 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8AD44CE1AEA0F3E00E6F060 /* CJUser.h */,
+				A8AD44CF1AEA0F3E00E6F060 /* CJUser.m */,
+				A8AD44D11AEA208800E6F060 /* CJRoom.h */,
+				A8AD44D21AEA208800E6F060 /* CJRoom.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A8EF55041AE9C73D001FF4FE = {
+			isa = PBXGroup;
+			children = (
+				A8EF550F1AE9C73D001FF4FE /* CoJam */,
+				A8EF55361AE9C817001FF4FE /* Frameworks */,
+				A8EF550E1AE9C73D001FF4FE /* Products */,
+				5A40D89AE5E1CCB02D780195 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		A8EF550E1AE9C73D001FF4FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8EF550D1AE9C73D001FF4FE /* CoJam.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8EF550F1AE9C73D001FF4FE /* CoJam */ = {
+			isa = PBXGroup;
+			children = (
+				A8EF55141AE9C73D001FF4FE /* AppDelegate.h */,
+				A8EF55151AE9C73D001FF4FE /* AppDelegate.m */,
+				A8AD449F1AE9EFB500E6F060 /* Cells */,
+				A8AD44981AE9D05300E6F060 /* Controllers */,
+				A8EF551D1AE9C73D001FF4FE /* Images.xcassets */,
+				A8AD44CD1AEA0EF900E6F060 /* Models */,
+				A8EF55101AE9C73D001FF4FE /* Supporting Files */,
+				A8AD44971AE9D04500E6F060 /* Util */,
+			);
+			path = CoJam;
+			sourceTree = "<group>";
+		};
+		A8EF55101AE9C73D001FF4FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8EF55111AE9C73D001FF4FE /* Info.plist */,
+				A8EF55121AE9C73D001FF4FE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8EF55361AE9C817001FF4FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8AD44CB1AEA014E00E6F060 /* Social.framework */,
+				A8AD44C91AEA014800E6F060 /* Accounts.framework */,
+				A8AD44C71AEA014000E6F060 /* libsqlite3.dylib */,
+				A8AD44C51AEA013900E6F060 /* libz.dylib */,
+				A8AD44C31AEA013100E6F060 /* SystemConfiguration.framework */,
+				A8AD44C11AEA012900E6F060 /* StoreKit.framework */,
+				A8AD44BF1AEA012200E6F060 /* Security.framework */,
+				A8AD44BD1AEA011B00E6F060 /* QuartzCore.framework */,
+				A8AD44BB1AEA011200E6F060 /* MobileCoreServices.framework */,
+				A8AD44B91AEA010800E6F060 /* CoreLocation.framework */,
+				A8AD44B71AEA010100E6F060 /* CoreGraphics.framework */,
+				A8AD44B51AEA00F800E6F060 /* CFNetwork.framework */,
+				A8AD44B31AEA00EB00E6F060 /* AudioToolbox.framework */,
+				A8AD44A51AEA00D800E6F060 /* Bolts.framework */,
+				A8AD44A61AEA00D800E6F060 /* Parse.framework */,
+				A8AD44AA1AEA00D800E6F060 /* ParseUI.framework */,
+				A8AD44AB1AEA00D800E6F060 /* Spotify.framework */,
+				9FD369153FC85DD08E6CC1FF /* libPods-CoJam.a */,
+			);
+			name = Frameworks;
+			path = CoJam;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8EF550C1AE9C73D001FF4FE /* CoJam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8EF55301AE9C73D001FF4FE /* Build configuration list for PBXNativeTarget "CoJam" */;
+			buildPhases = (
+				6848147C1A477C395764AE51 /* Check Pods Manifest.lock */,
+				A8EF55091AE9C73D001FF4FE /* Sources */,
+				A8EF550A1AE9C73D001FF4FE /* Frameworks */,
+				A8EF550B1AE9C73D001FF4FE /* Resources */,
+				6CC6B32D3622B1C6D3F1F5D5 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoJam;
+			productName = CoJam;
+			productReference = A8EF550D1AE9C73D001FF4FE /* CoJam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8EF55051AE9C73D001FF4FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CJ;
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Stephen Greco";
+				TargetAttributes = {
+					A8EF550C1AE9C73D001FF4FE = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A8EF55081AE9C73D001FF4FE /* Build configuration list for PBXProject "CoJam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A8EF55041AE9C73D001FF4FE;
+			productRefGroup = A8EF550E1AE9C73D001FF4FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8EF550C1AE9C73D001FF4FE /* CoJam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8EF550B1AE9C73D001FF4FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8EF551E1AE9C73D001FF4FE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6848147C1A477C395764AE51 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6CC6B32D3622B1C6D3F1F5D5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoJam/Pods-CoJam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8EF55091AE9C73D001FF4FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8AD44961AE9D00900E6F060 /* CJColors.m in Sources */,
+				A8AD44D01AEA0F3E00E6F060 /* CJUser.m in Sources */,
+				A8EF55191AE9C73D001FF4FE /* CJMainViewController.m in Sources */,
+				A8AD44D31AEA208800E6F060 /* CJRoom.m in Sources */,
+				A828962D1AEB162D00ABA175 /* CJRoomViewController.m in Sources */,
+				A8EF55161AE9C73D001FF4FE /* AppDelegate.m in Sources */,
+				A828962A1AEA413300ABA175 /* CJRoomListTableViewCell.m in Sources */,
+				A8EF55131AE9C73D001FF4FE /* main.m in Sources */,
+				A8AD449B1AE9D7BD00E6F060 /* CJSpotifyHelper.m in Sources */,
+				A82896271AEA29C700ABA175 /* CJNewRoomView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A8EF552E1AE9C73D001FF4FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A8EF552F1AE9C73D001FF4FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8EF55311AE9C73D001FF4FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6ED6B51C072B42699A6A8F /* Pods-CoJam.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CoJam",
+					"$(PROJECT_DIR)/CoJam/Frameworks",
+				);
+				INFOPLIST_FILE = CoJam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A8EF55321AE9C73D001FF4FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5071E0186421FB937010D4 /* Pods-CoJam.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CoJam",
+					"$(PROJECT_DIR)/CoJam/Frameworks",
+				);
+				INFOPLIST_FILE = CoJam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8EF55081AE9C73D001FF4FE /* Build configuration list for PBXProject "CoJam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8EF552E1AE9C73D001FF4FE /* Debug */,
+				A8EF552F1AE9C73D001FF4FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8EF55301AE9C73D001FF4FE /* Build configuration list for PBXNativeTarget "CoJam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8EF55311AE9C73D001FF4FE /* Debug */,
+				A8EF55321AE9C73D001FF4FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A8EF55051AE9C73D001FF4FE /* Project object */;
+}
