@@ -55,8 +55,16 @@ static NSString* const CJSearchResultTableViewCellIdentifier = @"CJSearchResultT
                                 initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                 target:self action:@selector(showShareView)];
     
-    self.navigationItem.rightBarButtonItems = @[addSong, shareView];
+    UIBarButtonItem *playButton = [[UIBarButtonItem alloc]
+                                   initWithBarButtonSystemItem:UIBarButtonSystemItemPlay
+                                   target:self action:@selector(playRoom)];
+    
+    self.navigationItem.rightBarButtonItems = @[addSong, shareView, playButton];
 
+}
+
+- (void) playRoom {
+    [[CJSpotifyHelper defaultHelper] playTracksFromRoom:_room];
 }
 
 - (void) refresh {

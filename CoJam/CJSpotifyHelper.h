@@ -20,11 +20,13 @@
 @end
 
 
-@interface CJSpotifyHelper : NSObject <SPTAuthViewDelegate>
+@interface CJSpotifyHelper : NSObject <SPTAuthViewDelegate, SPTAudioStreamingPlaybackDelegate>
 
 @property (nonatomic, strong) SPTSession *session;
 @property (nonatomic, strong) SPTAudioStreamingController *player;
 @property (nonatomic, strong) SPTUser *spotifyUser;
+@property CJRoom *currentRoom;
+@property NSString *spotifyClientId;
 
 @property id<CJSpotifyHelperDelegate> delegate;
 
@@ -45,5 +47,6 @@
 
 - (BOOL) handleURL:(NSURL *) url;
 
+- (void) playTracksFromRoom:(CJRoom *) room;
 
 @end

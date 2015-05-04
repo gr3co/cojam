@@ -33,6 +33,8 @@ static NSString* const spotifySessionDefaultsKey = @"spotifySession";
     [Parse setApplicationId:parseAppId clientKey:parseClientKey];
     [CJUser enableAutomaticUser];
     
+    [CJSpotifyHelper defaultHelper].spotifyClientId = spotifyClientId;
+    
     // Create SPTAuth instance; create login URL and open it
     SPTAuth *auth = [SPTAuth defaultInstance];
     [auth setClientID:spotifyClientId];

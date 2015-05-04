@@ -41,6 +41,29 @@ static NSArray *getURLsFromStrings(NSArray *strings) {
     return result;
 }
 
+- (void) playTracksFromRoom:(CJRoom *)room {
+    if (_player == nil) {
+        _player = [[SPTAudioStreamingController alloc]
+                   initWithClientId:_spotifyClientId];
+        _player.playbackDelegate = self;
+    }
+    [_player loginWithSession:_session callback:^(NSError *error) {
+        if (error != nil) {
+            NSLog(@"%@", error);
+        }
+        [_player playURIs:getURLsFromStrings(room.queue)
+                fromIndex:0 callback:^(NSError *error) {
+            if (error != nil) {
+                NSLog(@"%@", error);
+            }
+            _currentRoom = room;
+            [room addObject:[CJUser currentUser] forKey:@"members"];
+            [room saveInBackground];
+        }];
+    }];
+}
+
+
 - (BOOL) handleURL:(NSURL *)url {
     if ([url.host isEqualToString:@"room"]) {
         NSString *roomId = url.pathComponents[1];
