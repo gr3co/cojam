@@ -18,7 +18,7 @@ static NSString* const parseClientKey = @"Neyfbq0ibmZqnKxkYtUXRyPuAB8CqM30dkFAJf
 static NSString* const spotifyClientId = @"100501836e2e494c97c10613da0587d2";
 static NSString* const spotifySwapURL = @"https://cojam.parseapp.com/swap";
 static NSString* const spotifyRefreshURL = @"https://cojam.parseapp.com/refresh";
-static NSString* const spotifyCallbackURL = @"cojam-spotify://callback";
+static NSString* const spotifyCallbackURL = @"cojam://spotify/callback";
 static NSString* const spotifySessionDefaultsKey = @"spotifySession";
 
 @implementation AppDelegate
@@ -52,7 +52,6 @@ static NSString* const spotifySessionDefaultsKey = @"spotifySession";
     return YES;
 }
 
-// Handle auth callback
 -(BOOL)application:(UIApplication *)application
            openURL:(NSURL *)url
  sourceApplication:(NSString *)sourceApplication
@@ -71,13 +70,12 @@ static NSString* const spotifySessionDefaultsKey = @"spotifySession";
                  return;
              }
              
-             NSLog(@"wut");
-             
          }];
         return YES;
     }
     
-    return NO;
+    // Otherwise it's probably a custom URL, have it handled here
+    return [[CJSpotifyHelper defaultHelper] handleURL:url];
 }
 
 

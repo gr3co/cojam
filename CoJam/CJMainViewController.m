@@ -78,11 +78,6 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void) initNavbar {
     // Logo in the center of navigation bar
     self.navigationController.view.window.tintColor = [CJColors altColorB];
@@ -165,6 +160,19 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
     }];
 }
 
+- (void) openRoomView:(CJRoom*) room {
+    
+    if (room == nil) {
+        // TODO: open some sort of 404 view
+    } else {
+        CJRoomViewController *roomVc = [[CJRoomViewController alloc]
+                                        initWithNibName:nil bundle:nil];
+        roomVc.room = room;
+        [self.navigationController pushViewController:roomVc animated:YES];
+    }
+    
+}
+
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -198,10 +206,7 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     CJRoom *room = _rooms[indexPath.row];
-    CJRoomViewController *roomVc = [[CJRoomViewController alloc]
-                                    initWithNibName:nil bundle:nil];
-    roomVc.room = room;
-    [self.navigationController pushViewController:roomVc animated:YES];
+    [self openRoomView:room];
     
 }
 

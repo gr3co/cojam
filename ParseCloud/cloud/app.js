@@ -10,7 +10,7 @@ url = require('url');
 var config = new Parse.Object("Config");
 config.set("spotify_client_id", "100501836e2e494c97c10613da0587d2");
 config.set("spotify_client_secret", "9129022efdda416bb2be0f7c676822c4");
-config.set("spotify_callback_url", "cojam-spotify://callback");
+config.set("spotify_callback_url", "cojam://spotify/callback");
 config.set("spotify_endpoint", "https://accounts.spotify.com");
 
 var AUTH_HEADER = "Basic " + new buffer.Buffer(config.get("spotify_client_id") + ":" + config.get("spotify_client_secret")).toString("base64");

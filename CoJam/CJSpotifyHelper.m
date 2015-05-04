@@ -22,6 +22,7 @@ static CJSpotifyHelper *defaultHelper;
     }
 }
 
+
 + (NSString *) getArtistStringForArtistList:(NSArray *)artists {
     NSMutableArray *artistNames = [[NSMutableArray alloc]
                                    initWithCapacity:[artists count]];
@@ -38,6 +39,29 @@ static NSArray *getURLsFromStrings(NSArray *strings) {
         [result addObject:[NSURL URLWithString:(NSString*)obj]];
     }];
     return result;
+}
+
+- (BOOL) handleURL:(NSURL *)url {
+    if ([url.host isEqualToString:@"room"]) {
+        NSString *roomId = url.pathComponents[1];
+        [[[PFQuery queryWithClassName:@"Room"]
+         whereKey:@"idNumber" equalTo:roomId]
+         findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+             if (error) {
+                 NSLog(@"%@", error);
+             }
+             if (_delegate != nil) {
+                 if ([objects count] == 0) {
+                     // Let the delegate handle the nil case
+                     [_delegate openRoomView:nil];
+                 } else {
+                     [_delegate openRoomView:((CJRoom*)[objects firstObject])];
+                 }
+             }
+         }];
+        return YES;
+    }
+    return NO;
 }
 
 - (void) getTracksWithURIs:(NSArray*)uris

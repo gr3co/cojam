@@ -53,7 +53,7 @@ static NSString* const CJSearchResultTableViewCellIdentifier = @"CJSearchResultT
     
     UIBarButtonItem *shareView = [[UIBarButtonItem alloc]
                                 initWithBarButtonSystemItem:UIBarButtonSystemItemAction
-                                target:self action:nil];
+                                target:self action:@selector(showShareView)];
     
     self.navigationItem.rightBarButtonItems = @[addSong, shareView];
 
@@ -125,6 +125,30 @@ static NSString* const CJSearchResultTableViewCellIdentifier = @"CJSearchResultT
                          // WOOOOOO
                      }];
 
+}
+
+- (void) showShareView {
+    
+    NSString *intro = @"Come jam with me on CoJam: ";
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"cojam://room/%@",
+                                       _room.idNumber]];
+    
+    UIActivityViewController *controller = [[UIActivityViewController alloc]
+                                            initWithActivityItems:@[intro, url]
+                                            applicationActivities:nil];
+    controller.excludedActivityTypes = @[UIActivityTypePostToWeibo,
+                                         UIActivityTypeMail,
+                                         UIActivityTypePrint,
+                                         UIActivityTypeAssignToContact,
+                                         UIActivityTypeSaveToCameraRoll,
+                                         UIActivityTypeAddToReadingList,
+                                         UIActivityTypePostToFlickr,
+                                         UIActivityTypePostToVimeo,
+                                         UIActivityTypePostToTencentWeibo,
+                                         UIActivityTypePostToFacebook,
+                                         UIActivityTypePostToTwitter];
+    [self presentViewController:controller animated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {

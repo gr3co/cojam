@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <Spotify/Spotify.h>
 #import "CJUser.h"
+#import "CJRoom.h"
 
 @protocol CJSpotifyHelperDelegate <NSObject>
 
 @optional
 - (void) refresh;
+- (void) openRoomView:(CJRoom*) room;
 
 @end
 
@@ -41,6 +43,7 @@
                   andBlock:(void (^)(NSArray *results,
                                      NSError *error)) block;
 
+- (BOOL) handleURL:(NSURL *) url;
 
 
 @end
