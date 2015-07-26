@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A225f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgb-2A-4ov">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CJIcon" translatesAutoresizingMaskIntoConstraints="NO" id="iQ0-Ob-Zok">
+                            <rect key="frame" x="120" y="92" width="240" height="296.5"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="iQ0-Ob-Zok" secondAttribute="height" multiplier="348:430" id="v1g-iz-MpG"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <animations/>
+                    <constraints>
+                        <constraint firstItem="iQ0-Ob-Zok" firstAttribute="width" secondItem="bgb-2A-4ov" secondAttribute="width" multiplier="0.5" id="AO3-fs-f6g"/>
+                        <constraint firstAttribute="centerY" secondItem="iQ0-Ob-Zok" secondAttribute="centerY" id="dr9-uc-tcR"/>
+                        <constraint firstAttribute="centerX" secondItem="iQ0-Ob-Zok" secondAttribute="centerX" id="e8T-tP-AF8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="0.22352941176470587" green="0.76078431372549016" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="bgb-2A-4ov" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7Nj-ON-Hj1"/>
+                <constraint firstAttribute="bottom" secondItem="bgb-2A-4ov" secondAttribute="bottom" id="C3J-mo-NPx"/>
+                <constraint firstItem="bgb-2A-4ov" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Kic-6z-LoV"/>
+                <constraint firstItem="bgb-2A-4ov" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="52" id="Nop-FM-fjM"/>
+                <constraint firstAttribute="trailing" secondItem="bgb-2A-4ov" secondAttribute="trailing" id="ONL-X7-QVY"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Nop-FM-fjM"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="404" y="445"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CJIcon" width="348" height="430"/>
+    </resources>
+</document>

@@ -13,6 +13,8 @@
 		A828962D1AEB162D00ABA175 /* CJRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A828962C1AEB162D00ABA175 /* CJRoomViewController.m */; };
 		A82EB9A21B656D9600952C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9A11B656D9600952C76 /* AppDelegate.swift */; };
 		A82EB9A51B656F6400952C76 /* CJConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9A41B656F6400952C76 /* CJConstants.swift */; };
+		A82EB9A71B65743D00952C76 /* CJMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82EB9A61B65743D00952C76 /* CJMain.storyboard */; };
+		A82EB9A91B6574F800952C76 /* CJLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82EB9A81B6574F800952C76 /* CJLaunchScreen.xib */; };
 		A82F91C91AF314A000C1E25A /* CJFindSongView.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F91C81AF314A000C1E25A /* CJFindSongView.m */; };
 		A82F91CC1AF31C6200C1E25A /* CJSearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F91CB1AF31C6200C1E25A /* CJSearchResultTableViewCell.m */; };
 		A8AD44961AE9D00900E6F060 /* CJColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44951AE9D00900E6F060 /* CJColors.m */; };
@@ -52,6 +54,8 @@
 		A82EB9A11B656D9600952C76 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A82EB9A31B656EFF00952C76 /* CJBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJBridgingHeader.h; sourceTree = "<group>"; };
 		A82EB9A41B656F6400952C76 /* CJConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJConstants.swift; sourceTree = "<group>"; };
+		A82EB9A61B65743D00952C76 /* CJMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CJMain.storyboard; sourceTree = "<group>"; };
+		A82EB9A81B6574F800952C76 /* CJLaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJLaunchScreen.xib; sourceTree = "<group>"; };
 		A82F91C71AF314A000C1E25A /* CJFindSongView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFindSongView.h; sourceTree = "<group>"; };
 		A82F91C81AF314A000C1E25A /* CJFindSongView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFindSongView.m; sourceTree = "<group>"; };
 		A82F91CA1AF31C6200C1E25A /* CJSearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSearchResultTableViewCell.h; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				A8AD449F1AE9EFB500E6F060 /* Cells */,
 				A82EB9A31B656EFF00952C76 /* CJBridgingHeader.h */,
 				A82EB9A41B656F6400952C76 /* CJConstants.swift */,
+				A82EB9A81B6574F800952C76 /* CJLaunchScreen.xib */,
+				A82EB9A61B65743D00952C76 /* CJMain.storyboard */,
 				A8AD44981AE9D05300E6F060 /* Controllers */,
 				A8EF551D1AE9C73D001FF4FE /* Images.xcassets */,
 				A8AD44CD1AEA0EF900E6F060 /* Models */,
@@ -277,6 +283,7 @@
 				TargetAttributes = {
 					A8EF550C1AE9C73D001FF4FE = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 3MGN9YP3AM;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -308,6 +315,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82EB9A91B6574F800952C76 /* CJLaunchScreen.xib in Resources */,
+				A82EB9A71B65743D00952C76 /* CJMain.storyboard in Resources */,
 				A8EF551E1AE9C73D001FF4FE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,7 +464,8 @@
 			baseConfigurationReference = 9F6ED6B51C072B42699A6A8F /* Pods-CoJam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CoJam",
@@ -465,6 +475,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = CoJam/CJBridgingHeader.h;
 			};
 			name = Debug;
@@ -474,7 +485,8 @@
 			baseConfigurationReference = CB5071E0186421FB937010D4 /* Pods-CoJam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CoJam",
@@ -484,6 +496,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = CoJam/CJBridgingHeader.h;
 			};
 			name = Release;

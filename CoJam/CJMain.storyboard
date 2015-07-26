@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A225f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0lp-IU-E45">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hgX-cf-w2b">
+            <objects>
+                <navigationController id="0lp-IU-E45" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZhC-9y-bh7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="0.22352941179999999" green="0.76078431369999999" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="lbH-d7-WhF">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="tintColor" red="0.22352941179999999" green="0.63921568630000003" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="Iue-Gm-Vtg" kind="relationship" relationship="rootViewController" id="zGn-o9-5oa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LlQ-JO-Oef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484" y="440"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="asV-tB-2CA">
+            <objects>
+                <tableViewController id="Iue-Gm-Vtg" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hb0-Vp-ivB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wd7-kK-s84">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wd7-kK-s84" id="BNK-Wr-On4">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Iue-Gm-Vtg" id="gCh-1I-GDU"/>
+                            <outlet property="delegate" destination="Iue-Gm-Vtg" id="0iP-Dw-q62"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="BPA-nY-Mgj">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="O5k-7l-47Y"/>
+                        <view key="titleView" contentMode="scaleToFill" id="Lja-G4-8xv" userLabel="LogoView">
+                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CJLogo" translatesAutoresizingMaskIntoConstraints="NO" id="idN-Rh-wWU">
+                                    <rect key="frame" x="46" y="0.0" width="148.5" height="33"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="idN-Rh-wWU" secondAttribute="height" multiplier="441:98" id="RlD-g2-i61"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="centerX" secondItem="idN-Rh-wWU" secondAttribute="centerX" id="AKl-KM-ouL"/>
+                                <constraint firstAttribute="bottom" secondItem="idN-Rh-wWU" secondAttribute="bottom" id="OP8-va-A3S"/>
+                                <constraint firstItem="idN-Rh-wWU" firstAttribute="top" secondItem="Lja-G4-8xv" secondAttribute="top" id="xeB-3E-QvA"/>
+                            </constraints>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fef-85-Exi"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycH-Ku-gNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="326" y="440"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CJLogo" width="441" height="98"/>
+    </resources>
+    <color key="tintColor" red="0.60784313725490191" green="0.2196078431372549" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+</document>
