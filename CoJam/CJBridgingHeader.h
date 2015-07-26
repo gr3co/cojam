@@ -11,9 +11,10 @@
 
 #import <Parse/Parse.h>
 #import <Spotify/Spotify.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <AsyncImageView/AsyncImageView.h>
 #import "CJUser.h"
 #import "CJRoom.h"
 #import "CJSpotifyHelper.h"
-
 
 #endif

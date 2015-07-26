@@ -10,7 +10,6 @@
 #import "CJLoginViewController.h"
 #import "CJHomeHeaderTableViewCell.h"
 #import "CJColors.h"
-#import "CJRoomListTableViewCell.h"
 #import "CJRoomViewController.h"
 
 #import <Parse/Parse.h>
@@ -42,9 +41,6 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
     _tableView.dataSource = self;
     _tableView.rowHeight = 75;
     [self.view addSubview: _tableView];
-    
-    [_tableView registerClass:[CJRoomListTableViewCell class]
-           forCellReuseIdentifier:CJRoomListTableViewCellIdentifier];
     
     CJSpotifyHelper *helper = [CJSpotifyHelper defaultHelper];
     helper.delegate = self;
@@ -192,19 +188,7 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CJRoomListTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:
-                                     CJRoomListTableViewCellIdentifier];
-    
-    if (cell == nil) {
-        cell = [[CJRoomListTableViewCell alloc]
-                initWithStyle:UITableViewCellStyleDefault
-                reuseIdentifier:CJRoomListTableViewCellIdentifier];
-    }
-    
-    CJRoom *room = _rooms[indexPath.row];
-    cell.displayName.text = room.displayName;
-    
-    return cell;
+    return nil;
     
 }
 

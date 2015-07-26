@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		1E829E21CBF54D02AB663345 /* libPods-CoJam.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD369153FC85DD08E6CC1FF /* libPods-CoJam.a */; };
 		A82896271AEA29C700ABA175 /* CJNewRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A82896261AEA29C700ABA175 /* CJNewRoomView.m */; };
-		A828962A1AEA413300ABA175 /* CJRoomListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A82896291AEA413300ABA175 /* CJRoomListTableViewCell.m */; };
 		A828962D1AEB162D00ABA175 /* CJRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A828962C1AEB162D00ABA175 /* CJRoomViewController.m */; };
 		A82EB9A21B656D9600952C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9A11B656D9600952C76 /* AppDelegate.swift */; };
 		A82EB9A51B656F6400952C76 /* CJConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9A41B656F6400952C76 /* CJConstants.swift */; };
 		A82EB9A71B65743D00952C76 /* CJMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82EB9A61B65743D00952C76 /* CJMain.storyboard */; };
 		A82EB9A91B6574F800952C76 /* CJLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82EB9A81B6574F800952C76 /* CJLaunchScreen.xib */; };
+		A82EB9AD1B65837C00952C76 /* CJMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9AC1B65837C00952C76 /* CJMainViewController.swift */; };
 		A82F91C91AF314A000C1E25A /* CJFindSongView.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F91C81AF314A000C1E25A /* CJFindSongView.m */; };
 		A82F91CC1AF31C6200C1E25A /* CJSearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F91CB1AF31C6200C1E25A /* CJSearchResultTableViewCell.m */; };
 		A8AD44961AE9D00900E6F060 /* CJColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44951AE9D00900E6F060 /* CJColors.m */; };
@@ -38,7 +38,6 @@
 		A8AD44CC1AEA014E00E6F060 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44CB1AEA014E00E6F060 /* Social.framework */; };
 		A8AD44D01AEA0F3E00E6F060 /* CJUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44CF1AEA0F3E00E6F060 /* CJUser.m */; };
 		A8AD44D31AEA208800E6F060 /* CJRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44D21AEA208800E6F060 /* CJRoom.m */; };
-		A8EF55191AE9C73D001FF4FE /* CJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EF55181AE9C73D001FF4FE /* CJMainViewController.m */; };
 		A8EF551E1AE9C73D001FF4FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8EF551D1AE9C73D001FF4FE /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -47,8 +46,6 @@
 		9FD369153FC85DD08E6CC1FF /* libPods-CoJam.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoJam.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82896251AEA29C700ABA175 /* CJNewRoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJNewRoomView.h; sourceTree = "<group>"; };
 		A82896261AEA29C700ABA175 /* CJNewRoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJNewRoomView.m; sourceTree = "<group>"; };
-		A82896281AEA413300ABA175 /* CJRoomListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRoomListTableViewCell.h; sourceTree = "<group>"; };
-		A82896291AEA413300ABA175 /* CJRoomListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRoomListTableViewCell.m; sourceTree = "<group>"; };
 		A828962B1AEB162D00ABA175 /* CJRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRoomViewController.h; sourceTree = "<group>"; };
 		A828962C1AEB162D00ABA175 /* CJRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRoomViewController.m; sourceTree = "<group>"; };
 		A82EB9A11B656D9600952C76 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +53,7 @@
 		A82EB9A41B656F6400952C76 /* CJConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJConstants.swift; sourceTree = "<group>"; };
 		A82EB9A61B65743D00952C76 /* CJMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CJMain.storyboard; sourceTree = "<group>"; };
 		A82EB9A81B6574F800952C76 /* CJLaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJLaunchScreen.xib; sourceTree = "<group>"; };
+		A82EB9AC1B65837C00952C76 /* CJMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJMainViewController.swift; sourceTree = "<group>"; };
 		A82F91C71AF314A000C1E25A /* CJFindSongView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFindSongView.h; sourceTree = "<group>"; };
 		A82F91C81AF314A000C1E25A /* CJFindSongView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFindSongView.m; sourceTree = "<group>"; };
 		A82F91CA1AF31C6200C1E25A /* CJSearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSearchResultTableViewCell.h; sourceTree = "<group>"; };
@@ -87,8 +85,6 @@
 		A8AD44D21AEA208800E6F060 /* CJRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRoom.m; sourceTree = "<group>"; };
 		A8EF550D1AE9C73D001FF4FE /* CoJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8EF55111AE9C73D001FF4FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8EF55171AE9C73D001FF4FE /* CJMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJMainViewController.h; sourceTree = "<group>"; };
-		A8EF55181AE9C73D001FF4FE /* CJMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJMainViewController.m; sourceTree = "<group>"; };
 		A8EF551D1AE9C73D001FF4FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CB5071E0186421FB937010D4 /* Pods-CoJam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJam.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoJam/Pods-CoJam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,10 +141,9 @@
 		A8AD44981AE9D05300E6F060 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A82EB9AC1B65837C00952C76 /* CJMainViewController.swift */,
 				A82F91C71AF314A000C1E25A /* CJFindSongView.h */,
 				A82F91C81AF314A000C1E25A /* CJFindSongView.m */,
-				A8EF55171AE9C73D001FF4FE /* CJMainViewController.h */,
-				A8EF55181AE9C73D001FF4FE /* CJMainViewController.m */,
 				A82896251AEA29C700ABA175 /* CJNewRoomView.h */,
 				A82896261AEA29C700ABA175 /* CJNewRoomView.m */,
 				A828962B1AEB162D00ABA175 /* CJRoomViewController.h */,
@@ -160,8 +155,6 @@
 		A8AD449F1AE9EFB500E6F060 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				A82896281AEA413300ABA175 /* CJRoomListTableViewCell.h */,
-				A82896291AEA413300ABA175 /* CJRoomListTableViewCell.m */,
 				A82F91CA1AF31C6200C1E25A /* CJSearchResultTableViewCell.h */,
 				A82F91CB1AF31C6200C1E25A /* CJSearchResultTableViewCell.m */,
 			);
@@ -364,12 +357,11 @@
 				A8AD44961AE9D00900E6F060 /* CJColors.m in Sources */,
 				A82F91CC1AF31C6200C1E25A /* CJSearchResultTableViewCell.m in Sources */,
 				A8AD44D01AEA0F3E00E6F060 /* CJUser.m in Sources */,
-				A8EF55191AE9C73D001FF4FE /* CJMainViewController.m in Sources */,
 				A8AD44D31AEA208800E6F060 /* CJRoom.m in Sources */,
 				A82F91C91AF314A000C1E25A /* CJFindSongView.m in Sources */,
+				A82EB9AD1B65837C00952C76 /* CJMainViewController.swift in Sources */,
 				A828962D1AEB162D00ABA175 /* CJRoomViewController.m in Sources */,
 				A82EB9A21B656D9600952C76 /* AppDelegate.swift in Sources */,
-				A828962A1AEA413300ABA175 /* CJRoomListTableViewCell.m in Sources */,
 				A8AD449B1AE9D7BD00E6F060 /* CJSpotifyHelper.m in Sources */,
 				A82EB9A51B656F6400952C76 /* CJConstants.swift in Sources */,
 				A82896271AEA29C700ABA175 /* CJNewRoomView.m in Sources */,

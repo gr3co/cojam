@@ -23,3 +23,9 @@ struct Tokens {
     static let spotifyClientId = "100501836e2e494c97c10613da0587d2"
     
 }
+
+struct CellIdentifiers {
+    
+    static let roomListCellIdentifier = "CJRoomListTableCell"
+    
+}

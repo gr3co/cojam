@@ -4,6 +4,7 @@
 target 'CoJam' do
 
 pod 'MBProgressHUD', '~> 0.9.1'
+pod 'AsyncImageView', '~> 1.5.1'
 
 end
 
