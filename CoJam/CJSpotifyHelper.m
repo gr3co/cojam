@@ -9,6 +9,7 @@
 #import "CJSpotifyHelper.h"
 #import <Parse/Parse.h>
 #import "CJUser.h"
+#import <AVFoundation/AVFoundation.h>
 
 static CJSpotifyHelper *defaultHelper;
 
@@ -42,6 +43,12 @@ static NSArray *getURLsFromStrings(NSArray *strings) {
 }
 
 - (void) playTracksFromRoom:(CJRoom *)room {
+    NSError *error;
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
+    if (error != nil) {
+        NSLog(@"%@", error);
+        return;
+    }
     if (_player == nil) {
         _player = [[SPTAudioStreamingController alloc]
                    initWithClientId:_spotifyClientId];
@@ -57,8 +64,9 @@ static NSArray *getURLsFromStrings(NSArray *strings) {
                 NSLog(@"%@", error);
             }
             _currentRoom = room;
-            [room addObject:[CJUser currentUser] forKey:@"members"];
-            [room saveInBackground];
+            PFRelation *relation = [room relationForKey:@"members"];
+            [relation addObject:[PFUser currentUser]];
+            [room saveEventually];
         }];
     }];
 }
@@ -146,6 +154,8 @@ static NSArray *getURLsFromStrings(NSArray *strings) {
 
 }
 
+// #pragma mark - SPTAuthViewDelegate
+
 - (void) authenticationViewController:(SPTAuthViewController *)authenticationViewController
                   didLoginWithSession:(SPTSession *)session {
     
@@ -194,5 +204,11 @@ static NSArray *getURLsFromStrings(NSArray *strings) {
     NSLog(@"Cancelled login");
 }
 
+
+// #pragma mark - SPTAudioStreamingPlaybackDelegate
+- (void) audioStreaming:(SPTAudioStreamingController *)audioStreaming didStopPlayingTrack:(NSURL *)trackUri {
+    [_currentRoom removeObject:trackUri.absoluteString forKey:@"queue"];
+    [_currentRoom saveInBackground];
+}
 
 @end

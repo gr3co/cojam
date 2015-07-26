@@ -164,6 +164,11 @@ static NSString* const CJRoomListTableViewCellIdentifier = @"CJRoomListTableView
     
     if (room == nil) {
         // TODO: open some sort of 404 view
+        [[[UIAlertView alloc] initWithTitle:@"Not Found"
+                                    message:@"The room you're requesting does not exist."
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil] show];
     } else {
         CJRoomViewController *roomVc = [[CJRoomViewController alloc]
                                         initWithNibName:nil bundle:nil];
