@@ -46,8 +46,8 @@ class CJSpotifyManager: NSObject, SPTAuthViewDelegate, SPTAudioStreamingPlayback
     }
     
     func performSearch(query: String, block: ([SPTPartialTrack]?, error: NSError?) -> Void) {
-        SPTRequest.performSearchWithQuery(query, queryType: .QueryTypeTrack,
-            session: self.session!, callback: {block($1 as? [SPTPartialTrack], error: $0)})
+        SPTSearch.performSearchWithQuery(query, queryType: .QueryTypeTrack,
+            accessToken: self.session!.accessToken, callback: {block($1 as? [SPTPartialTrack], error: $0)})
     }
     
     // MARK: - Playback
@@ -98,7 +98,7 @@ class CJSpotifyManager: NSObject, SPTAuthViewDelegate, SPTAudioStreamingPlayback
     // MARK: - SPTAuthViewDelegate
     func authenticationViewController(authenticationViewController: SPTAuthViewController!, didLoginWithSession session: SPTSession!) {
         self.session = session
-        SPTRequest.userInformationForUserInSession(session) { (_, object: AnyObject?) in
+        SPTUser.requestCurrentUserWithAccessToken(session.accessToken) { (_, object: AnyObject?) in
             
             if let spotifyUser = object as? SPTUser {
                 self.spotifyUser = spotifyUser

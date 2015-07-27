@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CJRoomViewDelegate {
+    func updateNowPlaying(track: SPTPartialTrack)
+}
+
 class CJRoomViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -15,20 +19,28 @@ class CJRoomViewController: UIViewController {
     
     var room : CJRoom!
     var queue : [SPTPartialTrack]?
+    var delegate : CJRoomViewDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        delegate = self.childViewControllers[0] as! CJRoomViewDelegate
+        titleLabel.text = room?.displayName ?? "Untitled"
         refresh()
     }
 
+    func updateNowPlaying() {
+        if let track = queue?[0] {
+            delegate.updateNowPlaying(track)
+        }
+    }
+    
     func refresh() {
         room.fetchInBackgroundWithBlock() { _ in
             CJSpotifyManager.sharedManager.getTracks(self.room.queue as! [String]) {
                 (results : [SPTPartialTrack]?, _) in
                 self.queue = results
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.tableView.reloadData()
-                }
+                self.tableView.reloadData()
+                self.updateNowPlaying()
             }
         }
     }

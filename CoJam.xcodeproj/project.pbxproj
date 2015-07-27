@@ -37,6 +37,7 @@
 		A8AD44D01AEA0F3E00E6F060 /* CJUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44CF1AEA0F3E00E6F060 /* CJUser.m */; };
 		A8AD44D31AEA208800E6F060 /* CJRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44D21AEA208800E6F060 /* CJRoom.m */; };
 		A8E7A7EA1B660F8F00686951 /* CJRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7A7E91B660F8F00686951 /* CJRoomViewController.swift */; };
+		A8E7A7EC1B6617DB00686951 /* CJNowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7A7EB1B6617DB00686951 /* CJNowPlayingViewController.swift */; };
 		A8EF551E1AE9C73D001FF4FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8EF551D1AE9C73D001FF4FE /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		A8AD44D11AEA208800E6F060 /* CJRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRoom.h; sourceTree = "<group>"; };
 		A8AD44D21AEA208800E6F060 /* CJRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRoom.m; sourceTree = "<group>"; };
 		A8E7A7E91B660F8F00686951 /* CJRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJRoomViewController.swift; sourceTree = "<group>"; };
+		A8E7A7EB1B6617DB00686951 /* CJNowPlayingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJNowPlayingViewController.swift; sourceTree = "<group>"; };
 		A8EF550D1AE9C73D001FF4FE /* CoJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8EF55111AE9C73D001FF4FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8EF551D1AE9C73D001FF4FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				A828962B1AEB162D00ABA175 /* CJRoomViewController.h */,
 				A828962C1AEB162D00ABA175 /* CJRoomViewController.m */,
 				A8E7A7E91B660F8F00686951 /* CJRoomViewController.swift */,
+				A8E7A7EB1B6617DB00686951 /* CJNowPlayingViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				A86C0B101B65ABB40097E873 /* CJUtils.swift in Sources */,
 				A82EB9AD1B65837C00952C76 /* CJMainViewController.swift in Sources */,
 				A8E7A7EA1B660F8F00686951 /* CJRoomViewController.swift in Sources */,
+				A8E7A7EC1B6617DB00686951 /* CJNowPlayingViewController.swift in Sources */,
 				A82EB9AF1B65AA5E00952C76 /* CJSpotifyManager.swift in Sources */,
 				A82EB9A21B656D9600952C76 /* AppDelegate.swift in Sources */,
 				A82EB9A51B656F6400952C76 /* CJConstants.swift in Sources */,

@@ -11,7 +11,8 @@
         <mutableArray key="Avenir.ttc">
             <string>Avenir-BookOblique</string>
             <string>Avenir-Medium</string>
-            <string>Avenir-Black</string>
+            <string>Avenir-Roman</string>
+            <string>Avenir-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -214,7 +215,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmO-j8-JXv">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="33"/>
                                     <animations/>
-                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
                                     <color key="textColor" red="0.60784313729999995" green="0.21960784310000001" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -227,6 +228,7 @@
                                 <constraint firstAttribute="bottom" secondItem="UmO-j8-JXv" secondAttribute="bottom" id="vJP-Ya-KDF"/>
                             </constraints>
                         </view>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oVf-ey-wKc"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="1pm-oq-8sj" id="khx-dT-A9w"/>
@@ -237,10 +239,10 @@
             </objects>
             <point key="canvasLocation" x="1115" y="440"/>
         </scene>
-        <!--View Controller-->
+        <!--Now Playing View-->
         <scene sceneID="I1h-B1-74l">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="V7j-hs-LER" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="V7j-hs-LER" userLabel="Now Playing View" customClass="CJNowPlayingViewController" customModule="CoJam" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LAm-GQ-JPB"/>
                         <viewControllerLayoutGuide type="bottom" id="ILK-lq-E0m"/>
@@ -248,10 +250,41 @@
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HE7-pk-dBs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9U-fE-qGG" customClass="AsyncImageView">
+                                <rect key="frame" x="226" y="44" width="148.5" height="148.5"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G9U-fE-qGG" secondAttribute="height" multiplier="1:1" id="ubi-8g-nkA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPW-Q6-Cwp" userLabel="Now Playing">
+                                <rect key="frame" x="40" y="8" width="520" height="27.5"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27.5" id="99I-kH-l10"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.60784313729999995" green="0.21960784310000001" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.22352941179999999" green="0.63921568630000003" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.22352941179999999" green="0.76078431369999999" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ILK-lq-E0m" firstAttribute="top" secondItem="G9U-fE-qGG" secondAttribute="bottom" constant="8" id="1bi-Wi-i53"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OPW-Q6-Cwp" secondAttribute="trailing" constant="20" id="Nfg-Ge-6rY"/>
+                            <constraint firstItem="G9U-fE-qGG" firstAttribute="centerX" secondItem="HE7-pk-dBs" secondAttribute="centerX" id="YrO-at-7w6"/>
+                            <constraint firstItem="OPW-Q6-Cwp" firstAttribute="top" secondItem="LAm-GQ-JPB" secondAttribute="bottom" constant="8" id="ZR1-o0-l43"/>
+                            <constraint firstItem="OPW-Q6-Cwp" firstAttribute="leading" secondItem="HE7-pk-dBs" secondAttribute="leadingMargin" constant="20" id="qLl-Em-Qu2"/>
+                            <constraint firstItem="G9U-fE-qGG" firstAttribute="top" secondItem="OPW-Q6-Cwp" secondAttribute="bottom" constant="8" id="qZi-ZD-2C6"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="albumCover" destination="G9U-fE-qGG" id="52u-M9-z6G"/>
+                        <outlet property="titleLabel" destination="OPW-Q6-Cwp" id="Wm4-x6-0pJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4O-7A-CaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
