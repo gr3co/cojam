@@ -15,8 +15,10 @@
 		A82EB9A71B65743D00952C76 /* CJMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82EB9A61B65743D00952C76 /* CJMain.storyboard */; };
 		A82EB9A91B6574F800952C76 /* CJLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82EB9A81B6574F800952C76 /* CJLaunchScreen.xib */; };
 		A82EB9AD1B65837C00952C76 /* CJMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9AC1B65837C00952C76 /* CJMainViewController.swift */; };
+		A82EB9AF1B65AA5E00952C76 /* CJSpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9AE1B65AA5E00952C76 /* CJSpotifyManager.swift */; };
 		A82F91C91AF314A000C1E25A /* CJFindSongView.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F91C81AF314A000C1E25A /* CJFindSongView.m */; };
 		A82F91CC1AF31C6200C1E25A /* CJSearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F91CB1AF31C6200C1E25A /* CJSearchResultTableViewCell.m */; };
+		A86C0B101B65ABB40097E873 /* CJUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86C0B0F1B65ABB40097E873 /* CJUtils.swift */; };
 		A8AD44961AE9D00900E6F060 /* CJColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44951AE9D00900E6F060 /* CJColors.m */; };
 		A8AD449B1AE9D7BD00E6F060 /* CJSpotifyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD449A1AE9D7BD00E6F060 /* CJSpotifyHelper.m */; };
 		A8AD44AC1AEA00D800E6F060 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44A51AEA00D800E6F060 /* Bolts.framework */; };
@@ -54,10 +56,12 @@
 		A82EB9A61B65743D00952C76 /* CJMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CJMain.storyboard; sourceTree = "<group>"; };
 		A82EB9A81B6574F800952C76 /* CJLaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJLaunchScreen.xib; sourceTree = "<group>"; };
 		A82EB9AC1B65837C00952C76 /* CJMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJMainViewController.swift; sourceTree = "<group>"; };
+		A82EB9AE1B65AA5E00952C76 /* CJSpotifyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJSpotifyManager.swift; sourceTree = "<group>"; };
 		A82F91C71AF314A000C1E25A /* CJFindSongView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFindSongView.h; sourceTree = "<group>"; };
 		A82F91C81AF314A000C1E25A /* CJFindSongView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFindSongView.m; sourceTree = "<group>"; };
 		A82F91CA1AF31C6200C1E25A /* CJSearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSearchResultTableViewCell.h; sourceTree = "<group>"; };
 		A82F91CB1AF31C6200C1E25A /* CJSearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSearchResultTableViewCell.m; sourceTree = "<group>"; };
+		A86C0B0F1B65ABB40097E873 /* CJUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJUtils.swift; sourceTree = "<group>"; };
 		A8AD44941AE9D00900E6F060 /* CJColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJColors.h; sourceTree = "<group>"; };
 		A8AD44951AE9D00900E6F060 /* CJColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJColors.m; sourceTree = "<group>"; };
 		A8AD44991AE9D7BD00E6F060 /* CJSpotifyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSpotifyHelper.h; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 				A82EB9A41B656F6400952C76 /* CJConstants.swift */,
 				A82EB9A81B6574F800952C76 /* CJLaunchScreen.xib */,
 				A82EB9A61B65743D00952C76 /* CJMain.storyboard */,
+				A82EB9AE1B65AA5E00952C76 /* CJSpotifyManager.swift */,
+				A86C0B0F1B65ABB40097E873 /* CJUtils.swift */,
 				A8AD44981AE9D05300E6F060 /* Controllers */,
 				A8EF551D1AE9C73D001FF4FE /* Images.xcassets */,
 				A8AD44CD1AEA0EF900E6F060 /* Models */,
@@ -359,8 +365,10 @@
 				A8AD44D01AEA0F3E00E6F060 /* CJUser.m in Sources */,
 				A8AD44D31AEA208800E6F060 /* CJRoom.m in Sources */,
 				A82F91C91AF314A000C1E25A /* CJFindSongView.m in Sources */,
+				A86C0B101B65ABB40097E873 /* CJUtils.swift in Sources */,
 				A82EB9AD1B65837C00952C76 /* CJMainViewController.swift in Sources */,
 				A828962D1AEB162D00ABA175 /* CJRoomViewController.m in Sources */,
+				A82EB9AF1B65AA5E00952C76 /* CJSpotifyManager.swift in Sources */,
 				A82EB9A21B656D9600952C76 /* AppDelegate.swift in Sources */,
 				A8AD449B1AE9D7BD00E6F060 /* CJSpotifyHelper.m in Sources */,
 				A82EB9A51B656F6400952C76 /* CJConstants.swift in Sources */,
@@ -407,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -444,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -464,6 +472,7 @@
 					"$(PROJECT_DIR)/CoJam/Frameworks",
 				);
 				INFOPLIST_FILE = CoJam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,6 +494,7 @@
 					"$(PROJECT_DIR)/CoJam/Frameworks",
 				);
 				INFOPLIST_FILE = CoJam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

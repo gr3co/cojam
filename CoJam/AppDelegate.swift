@@ -24,9 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Parse.setApplicationId(Tokens.parseAppId, clientKey: Tokens.parseClientKey)
             CJUser.enableAutomaticUser()
             
-            // GET RID OF THIS
-            CJSpotifyHelper.defaultHelper().spotifyClientId = Tokens.spotifyClientId
-            
             // Setup Spotify authorization
             let auth = SPTAuth.defaultInstance()
             auth.clientID = Tokens.spotifyClientId
@@ -35,9 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             auth.tokenRefreshURL = NSURL(string: URLs.spotifyRefreshURL)
             auth.tokenSwapURL = NSURL(string: URLs.spotifySwapURL)
             auth.sessionUserDefaultsKey = kSpotifySessionDefaultsKey
-            
-            
-            // UI Stuff was here, but get rid of it
             
             return true
         
@@ -60,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             // Otherwise, check if it's a custom CoJam url
-            return CJSpotifyHelper.defaultHelper().handleURL(url)
+            return CJSpotifyManager.sharedManager.handleURL(url)
             
     }
     

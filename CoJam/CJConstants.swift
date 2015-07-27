@@ -7,6 +7,10 @@
 //
 
 let kSpotifySessionDefaultsKey = "spotifySession"
+let kSpotifyUsernameKey = "spotifyUsername"
+let kSpotifyAccessTokenKey = "spotifyAccessToken"
+let kSpotifyRefreshTokenKey = "spotifyRefreshToken"
+let kSpotifyExpirationDateKey = "spotifyExpirationDate"
 
 struct URLs {
     
