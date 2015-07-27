@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, openURL url: NSURL,
-        sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        sourceApplication: String?, annotation: AnyObject) -> Bool {
         
             // Ask Spotify Auth if this is an auth callback
             if SPTAuth.defaultInstance().canHandleURL(url) {
@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     (error: NSError?, _) -> Void in
                     
                     if error != nil {
-                        println("Auth error: \(error)")
+                        print("Auth error: \(error)")
                     }
                     
                 }

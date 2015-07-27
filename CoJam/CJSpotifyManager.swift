@@ -28,7 +28,7 @@ class CJSpotifyManager: NSObject, SPTAuthViewDelegate, SPTAudioStreamingPlayback
     // MARK: - Utility
     func handleURL(url: NSURL) -> Bool {
         if url.host == "room" {
-            let roomId = url.pathComponents![1] as! String
+            let roomId = url.pathComponents![1] 
             CJRoom.queryWithPredicate(NSPredicate(format: "idNumber == %@",
                 roomId))!.findObjectsInBackgroundWithBlock { (objects : [AnyObject]?, _) in
                 let room = objects?.first as? CJRoom
@@ -52,12 +52,7 @@ class CJSpotifyManager: NSObject, SPTAuthViewDelegate, SPTAudioStreamingPlayback
     
     // MARK: - Playback
     func playTracksFromRoom(room: CJRoom) {
-        var error: NSError?
-        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback,
-            error: &error)
-        if error != nil {
-            println("Audio error: \(error!)")
-        }
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
         if player == nil {
             player = SPTAudioStreamingController(clientId: Tokens.spotifyClientId)
             player?.playbackDelegate = self
@@ -86,7 +81,6 @@ class CJSpotifyManager: NSObject, SPTAuthViewDelegate, SPTAudioStreamingPlayback
                 SPTAuth.defaultInstance().renewSession(oldSession) {
                     (error: NSError?, newSession: SPTSession?) in
                     if error != nil {
-                        println(error)
                         return block(false, error)
                     }
                     self.session = newSession
@@ -126,7 +120,7 @@ class CJSpotifyManager: NSObject, SPTAuthViewDelegate, SPTAudioStreamingPlayback
     }
     
     func authenticationViewController(authenticationViewController: SPTAuthViewController!, didFailToLogin error: NSError!) {
-        println("Failed to login: \(error)")
+        print("Failed to login: \(error)")
         delegate?.failedToLogin()
     }
     

@@ -34,11 +34,8 @@ UITableViewDelegate, UITableViewDataSource {
         tableView.addSubview(refreshControl)
         
         MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        helper.attemptToReauthenticate { (success: Bool, error: NSError?) -> Void in
+        helper.attemptToReauthenticate { (success: Bool, _) -> Void in
             MBProgressHUD.hideHUDForView(self.view, animated: true)
-            if error != nil {
-                println("Auth error: \(error)")
-            }
             if success {
                 self.refresh()
             } else {
@@ -83,6 +80,14 @@ UITableViewDelegate, UITableViewDataSource {
         self.definesPresentationContext = true
         self.navigationController!.presentViewController(authvc,
             animated: true, completion: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showRoom" {
+            let controller = segue.destinationViewController as! CJRoomViewController
+            controller.room = (sender as! CJRoomReference).room
+        }
+        super.prepareForSegue(segue, sender: sender)
     }
     
     // MARK: - UITableViewDelegate
@@ -142,7 +147,11 @@ UITableViewDelegate, UITableViewDataSource {
     
 }
 
-class CJRoomListTableCell : UITableViewCell {
+protocol CJRoomReference {
+    var room : CJRoom? {get set}
+}
+
+class CJRoomListTableCell : UITableViewCell, CJRoomReference {
     
     @IBOutlet weak var albumCover: AsyncImageView!
     @IBOutlet weak var roomName: UILabel!

@@ -8,19 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1E829E21CBF54D02AB663345 /* libPods-CoJam.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD369153FC85DD08E6CC1FF /* libPods-CoJam.a */; };
-		A82896271AEA29C700ABA175 /* CJNewRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A82896261AEA29C700ABA175 /* CJNewRoomView.m */; };
-		A828962D1AEB162D00ABA175 /* CJRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A828962C1AEB162D00ABA175 /* CJRoomViewController.m */; };
 		A82EB9A21B656D9600952C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9A11B656D9600952C76 /* AppDelegate.swift */; };
 		A82EB9A51B656F6400952C76 /* CJConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9A41B656F6400952C76 /* CJConstants.swift */; };
 		A82EB9A71B65743D00952C76 /* CJMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82EB9A61B65743D00952C76 /* CJMain.storyboard */; };
 		A82EB9A91B6574F800952C76 /* CJLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82EB9A81B6574F800952C76 /* CJLaunchScreen.xib */; };
 		A82EB9AD1B65837C00952C76 /* CJMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9AC1B65837C00952C76 /* CJMainViewController.swift */; };
 		A82EB9AF1B65AA5E00952C76 /* CJSpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9AE1B65AA5E00952C76 /* CJSpotifyManager.swift */; };
-		A82F91C91AF314A000C1E25A /* CJFindSongView.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F91C81AF314A000C1E25A /* CJFindSongView.m */; };
 		A82F91CC1AF31C6200C1E25A /* CJSearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F91CB1AF31C6200C1E25A /* CJSearchResultTableViewCell.m */; };
 		A86C0B101B65ABB40097E873 /* CJUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86C0B0F1B65ABB40097E873 /* CJUtils.swift */; };
 		A8AD44961AE9D00900E6F060 /* CJColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44951AE9D00900E6F060 /* CJColors.m */; };
-		A8AD449B1AE9D7BD00E6F060 /* CJSpotifyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD449A1AE9D7BD00E6F060 /* CJSpotifyHelper.m */; };
 		A8AD44AC1AEA00D800E6F060 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44A51AEA00D800E6F060 /* Bolts.framework */; };
 		A8AD44AD1AEA00D800E6F060 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44A61AEA00D800E6F060 /* Parse.framework */; };
 		A8AD44B11AEA00D800E6F060 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44AA1AEA00D800E6F060 /* ParseUI.framework */; };
@@ -40,6 +36,7 @@
 		A8AD44CC1AEA014E00E6F060 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD44CB1AEA014E00E6F060 /* Social.framework */; };
 		A8AD44D01AEA0F3E00E6F060 /* CJUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44CF1AEA0F3E00E6F060 /* CJUser.m */; };
 		A8AD44D31AEA208800E6F060 /* CJRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44D21AEA208800E6F060 /* CJRoom.m */; };
+		A8E7A7EA1B660F8F00686951 /* CJRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7A7E91B660F8F00686951 /* CJRoomViewController.swift */; };
 		A8EF551E1AE9C73D001FF4FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8EF551D1AE9C73D001FF4FE /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +61,6 @@
 		A86C0B0F1B65ABB40097E873 /* CJUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJUtils.swift; sourceTree = "<group>"; };
 		A8AD44941AE9D00900E6F060 /* CJColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJColors.h; sourceTree = "<group>"; };
 		A8AD44951AE9D00900E6F060 /* CJColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJColors.m; sourceTree = "<group>"; };
-		A8AD44991AE9D7BD00E6F060 /* CJSpotifyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSpotifyHelper.h; sourceTree = "<group>"; };
-		A8AD449A1AE9D7BD00E6F060 /* CJSpotifyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSpotifyHelper.m; sourceTree = "<group>"; };
 		A8AD44A51AEA00D800E6F060 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		A8AD44A61AEA00D800E6F060 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
 		A8AD44AA1AEA00D800E6F060 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = "<group>"; };
@@ -87,6 +82,7 @@
 		A8AD44CF1AEA0F3E00E6F060 /* CJUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJUser.m; sourceTree = "<group>"; };
 		A8AD44D11AEA208800E6F060 /* CJRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRoom.h; sourceTree = "<group>"; };
 		A8AD44D21AEA208800E6F060 /* CJRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRoom.m; sourceTree = "<group>"; };
+		A8E7A7E91B660F8F00686951 /* CJRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJRoomViewController.swift; sourceTree = "<group>"; };
 		A8EF550D1AE9C73D001FF4FE /* CoJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8EF55111AE9C73D001FF4FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8EF551D1AE9C73D001FF4FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -136,8 +132,6 @@
 			children = (
 				A8AD44941AE9D00900E6F060 /* CJColors.h */,
 				A8AD44951AE9D00900E6F060 /* CJColors.m */,
-				A8AD44991AE9D7BD00E6F060 /* CJSpotifyHelper.h */,
-				A8AD449A1AE9D7BD00E6F060 /* CJSpotifyHelper.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -152,6 +146,7 @@
 				A82896261AEA29C700ABA175 /* CJNewRoomView.m */,
 				A828962B1AEB162D00ABA175 /* CJRoomViewController.h */,
 				A828962C1AEB162D00ABA175 /* CJRoomViewController.m */,
+				A8E7A7E91B660F8F00686951 /* CJRoomViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -277,12 +272,13 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CJ;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Stephen Greco";
 				TargetAttributes = {
 					A8EF550C1AE9C73D001FF4FE = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 3MGN9YP3AM;
+						DevelopmentTeam = AAPQ8E5N9R;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -364,15 +360,12 @@
 				A82F91CC1AF31C6200C1E25A /* CJSearchResultTableViewCell.m in Sources */,
 				A8AD44D01AEA0F3E00E6F060 /* CJUser.m in Sources */,
 				A8AD44D31AEA208800E6F060 /* CJRoom.m in Sources */,
-				A82F91C91AF314A000C1E25A /* CJFindSongView.m in Sources */,
 				A86C0B101B65ABB40097E873 /* CJUtils.swift in Sources */,
 				A82EB9AD1B65837C00952C76 /* CJMainViewController.swift in Sources */,
-				A828962D1AEB162D00ABA175 /* CJRoomViewController.m in Sources */,
+				A8E7A7EA1B660F8F00686951 /* CJRoomViewController.swift in Sources */,
 				A82EB9AF1B65AA5E00952C76 /* CJSpotifyManager.swift in Sources */,
 				A82EB9A21B656D9600952C76 /* AppDelegate.swift in Sources */,
-				A8AD449B1AE9D7BD00E6F060 /* CJSpotifyHelper.m in Sources */,
 				A82EB9A51B656F6400952C76 /* CJConstants.swift in Sources */,
-				A82896271AEA29C700ABA175 /* CJNewRoomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
