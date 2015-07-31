@@ -31,5 +31,6 @@ struct Tokens {
 struct CellIdentifiers {
     
     static let roomListCellIdentifier = "CJRoomListTableCell"
+    static let songViewCellIdentifier = "CJSongTableViewCell"
     
 }

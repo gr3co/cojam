@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="15A225f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0lp-IU-E45">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="15A234d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0lp-IU-E45">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
@@ -13,6 +13,8 @@
             <string>Avenir-Medium</string>
             <string>Avenir-Roman</string>
             <string>Avenir-Medium</string>
+            <string>Avenir-Book</string>
+            <string>Avenir-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -54,7 +56,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="CA8-rd-G7f">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CJRoomListTableCell" rowHeight="80" id="PFp-Eb-o5c" customClass="CJRoomListTableCell" customModule="CoJam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="113.5" width="600" height="80"/>
@@ -67,7 +69,7 @@
                                                     <rect key="frame" x="63.5" y="40" width="487.5" height="23.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dPu-sp-N7N" customClass="AsyncImageView">
@@ -175,22 +177,58 @@
                                     <segue destination="V7j-hs-LER" kind="embed" id="mxA-ej-RgI"/>
                                 </connections>
                             </containerView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1pm-oq-8sj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="1pm-oq-8sj">
                                 <rect key="frame" x="0.0" y="264" width="600" height="336"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CJRoomViewQueueCell" id="aie-TU-JAi">
-                                        <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CJSongTableViewCell" id="aie-TU-JAi" customClass="CJSongTableViewCell" customModule="CoJam" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aie-TU-JAi" id="D9V-kI-ucY">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1V-v5-BhR">
+                                                    <rect key="frame" x="8" y="16" width="39" height="17.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Artists" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csE-Aw-pGX" customClass="MarqueeLabel">
+                                                    <rect key="frame" x="55" y="14" width="537" height="21"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="FuB-SR-elD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="csE-Aw-pGX" secondAttribute="bottom" constant="0.5" id="8r4-HJ-8Ml"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="csE-Aw-pGX" secondAttribute="trailing" id="AAD-ms-PFK"/>
+                                                <constraint firstItem="csE-Aw-pGX" firstAttribute="leading" secondItem="v1V-v5-BhR" secondAttribute="trailing" constant="8" id="J1y-43-oe4"/>
+                                                <constraint firstItem="v1V-v5-BhR" firstAttribute="top" secondItem="D9V-kI-ucY" secondAttribute="topMargin" constant="8" id="Tgk-EC-uNu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="v1V-v5-BhR" secondAttribute="bottom" constant="2" id="d0W-GD-x8x"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="v1V-v5-BhR" secondAttribute="leading" id="ibh-QC-Huc"/>
+                                                <constraint firstItem="csE-Aw-pGX" firstAttribute="top" secondItem="D9V-kI-ucY" secondAttribute="topMargin" constant="6" id="ttz-tG-PHg"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="artistsLabel" destination="csE-Aw-pGX" id="9Tq-Al-edU"/>
+                                            <outlet property="titleLabel" destination="v1V-v5-BhR" id="FgE-4g-m0q"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fRm-d3-nmZ" id="Dgy-yj-XKc"/>
+                                    <outlet property="delegate" destination="fRm-d3-nmZ" id="Nrs-ub-fYg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>
@@ -231,7 +269,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="oVf-ey-wKc"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="1pm-oq-8sj" id="khx-dT-A9w"/>
+                        <outlet property="tableView" destination="1pm-oq-8sj" id="fjG-7v-oEM"/>
                         <outlet property="titleLabel" destination="UmO-j8-JXv" id="E2l-wq-GNW"/>
                     </connections>
                 </viewController>
@@ -268,17 +306,39 @@
                                 <color key="textColor" red="0.60784313729999995" green="0.21960784310000001" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8je-6C-gtM" userLabel="Right Container">
+                                <rect key="frame" x="374" y="0.0" width="205.5" height="200"/>
+                                <animations/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSE-bD-5qv" userLabel="Left Container">
+                                <rect key="frame" x="20" y="0.0" width="206" height="200"/>
+                                <animations/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.22352941179999999" green="0.76078431369999999" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="G9U-fE-qGG" firstAttribute="leading" secondItem="BSE-bD-5qv" secondAttribute="trailing" id="0Kg-Zn-rZd"/>
                             <constraint firstItem="ILK-lq-E0m" firstAttribute="top" secondItem="G9U-fE-qGG" secondAttribute="bottom" constant="8" id="1bi-Wi-i53"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8je-6C-gtM" secondAttribute="trailing" id="40N-Im-NxE"/>
+                            <constraint firstItem="ILK-lq-E0m" firstAttribute="top" secondItem="BSE-bD-5qv" secondAttribute="bottom" id="8xY-Ag-Ad3"/>
+                            <constraint firstItem="BSE-bD-5qv" firstAttribute="leading" secondItem="HE7-pk-dBs" secondAttribute="leadingMargin" id="BV9-OO-6mB"/>
+                            <constraint firstItem="8je-6C-gtM" firstAttribute="leading" secondItem="G9U-fE-qGG" secondAttribute="trailing" id="FWS-aw-gJp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OPW-Q6-Cwp" secondAttribute="trailing" constant="20" id="Nfg-Ge-6rY"/>
+                            <constraint firstItem="8je-6C-gtM" firstAttribute="top" secondItem="OPW-Q6-Cwp" secondAttribute="bottom" id="QZL-31-JP9"/>
                             <constraint firstItem="G9U-fE-qGG" firstAttribute="centerX" secondItem="HE7-pk-dBs" secondAttribute="centerX" id="YrO-at-7w6"/>
                             <constraint firstItem="OPW-Q6-Cwp" firstAttribute="top" secondItem="LAm-GQ-JPB" secondAttribute="bottom" constant="8" id="ZR1-o0-l43"/>
+                            <constraint firstItem="BSE-bD-5qv" firstAttribute="top" secondItem="LAm-GQ-JPB" secondAttribute="bottom" id="ZWG-Qa-dOD"/>
+                            <constraint firstItem="8je-6C-gtM" firstAttribute="top" secondItem="LAm-GQ-JPB" secondAttribute="bottom" id="lln-BH-6Jk"/>
                             <constraint firstItem="OPW-Q6-Cwp" firstAttribute="leading" secondItem="HE7-pk-dBs" secondAttribute="leadingMargin" constant="20" id="qLl-Em-Qu2"/>
                             <constraint firstItem="G9U-fE-qGG" firstAttribute="top" secondItem="OPW-Q6-Cwp" secondAttribute="bottom" constant="8" id="qZi-ZD-2C6"/>
+                            <constraint firstItem="ILK-lq-E0m" firstAttribute="top" secondItem="8je-6C-gtM" secondAttribute="bottom" id="xxN-ho-mhm"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QZL-31-JP9"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <connections>

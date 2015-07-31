@@ -1,13 +1,16 @@
 PODS:
   - AsyncImageView (1.5.1)
+  - MarqueeLabel (1.5.0)
   - MBProgressHUD (0.9.1)
 
 DEPENDENCIES:
   - AsyncImageView (~> 1.5.1)
+  - MarqueeLabel (~> 1.5.0)
   - MBProgressHUD (~> 0.9.1)
 
 SPEC CHECKSUMS:
   AsyncImageView: db9433939160710b34a5c249479e03af2a2121b0
+  MarqueeLabel: e09790dbf5fbefd8cb781338f41ccf1d063d968f
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
 
 COCOAPODS: 0.38.2
