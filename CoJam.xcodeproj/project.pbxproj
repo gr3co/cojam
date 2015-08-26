@@ -14,6 +14,7 @@
 		A82EB9A91B6574F800952C76 /* CJLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82EB9A81B6574F800952C76 /* CJLaunchScreen.xib */; };
 		A82EB9AD1B65837C00952C76 /* CJMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9AC1B65837C00952C76 /* CJMainViewController.swift */; };
 		A82EB9AF1B65AA5E00952C76 /* CJSpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9AE1B65AA5E00952C76 /* CJSpotifyManager.swift */; };
+		A82EDBFC1B8E38EC002EC67A /* CJNewRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EDBFB1B8E38EC002EC67A /* CJNewRoomViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A82F91CC1AF31C6200C1E25A /* CJSearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F91CB1AF31C6200C1E25A /* CJSearchResultTableViewCell.m */; };
 		A86C0B101B65ABB40097E873 /* CJUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86C0B0F1B65ABB40097E873 /* CJUtils.swift */; };
 		A8AD44961AE9D00900E6F060 /* CJColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44951AE9D00900E6F060 /* CJColors.m */; };
@@ -55,6 +56,7 @@
 		A82EB9A81B6574F800952C76 /* CJLaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJLaunchScreen.xib; sourceTree = "<group>"; };
 		A82EB9AC1B65837C00952C76 /* CJMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJMainViewController.swift; sourceTree = "<group>"; };
 		A82EB9AE1B65AA5E00952C76 /* CJSpotifyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJSpotifyManager.swift; sourceTree = "<group>"; };
+		A82EDBFB1B8E38EC002EC67A /* CJNewRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJNewRoomViewController.swift; sourceTree = "<group>"; };
 		A82F91C71AF314A000C1E25A /* CJFindSongView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFindSongView.h; sourceTree = "<group>"; };
 		A82F91C81AF314A000C1E25A /* CJFindSongView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFindSongView.m; sourceTree = "<group>"; };
 		A82F91CA1AF31C6200C1E25A /* CJSearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSearchResultTableViewCell.h; sourceTree = "<group>"; };
@@ -141,15 +143,16 @@
 		A8AD44981AE9D05300E6F060 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A82EB9AC1B65837C00952C76 /* CJMainViewController.swift */,
 				A82F91C71AF314A000C1E25A /* CJFindSongView.h */,
 				A82F91C81AF314A000C1E25A /* CJFindSongView.m */,
+				A82EB9AC1B65837C00952C76 /* CJMainViewController.swift */,
 				A82896251AEA29C700ABA175 /* CJNewRoomView.h */,
 				A82896261AEA29C700ABA175 /* CJNewRoomView.m */,
+				A82EDBFB1B8E38EC002EC67A /* CJNewRoomViewController.swift */,
+				A8E7A7EB1B6617DB00686951 /* CJNowPlayingViewController.swift */,
 				A828962B1AEB162D00ABA175 /* CJRoomViewController.h */,
 				A828962C1AEB162D00ABA175 /* CJRoomViewController.m */,
 				A8E7A7E91B660F8F00686951 /* CJRoomViewController.swift */,
-				A8E7A7EB1B6617DB00686951 /* CJNowPlayingViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				A82EB9AF1B65AA5E00952C76 /* CJSpotifyManager.swift in Sources */,
 				A82EB9A21B656D9600952C76 /* AppDelegate.swift in Sources */,
 				A82EB9A51B656F6400952C76 /* CJConstants.swift in Sources */,
+				A82EDBFC1B8E38EC002EC67A /* CJNewRoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CoJam",
@@ -487,6 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CoJam",

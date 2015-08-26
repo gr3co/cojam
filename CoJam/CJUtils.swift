@@ -7,27 +7,9 @@
 //
 
 func getArtistStringForArtistList(artists : [SPTPartialArtist]) -> String {
-    return ", ".join(artists.map {return $0.name!})
+    return artists.map({return $0.name!}).joinWithSeparator(", ")
 }
 
 func getURLSFromStrings(strings: [String]) -> [NSURL] {
     return strings.map {return NSURL(string: $0)!}
 }
-
-//protocol Queue {
-//    typealias T
-//    mutating func enqueue(item: T)
-//    mutating func dequeue() -> T?
-//}
-//
-//extension Array : Queue {
-//    typealias T = Element
-//    
-//    mutating func enqueue(item: Element) {
-//        self.append(item)
-//    }
-//    
-//    mutating func dequeue() -> Element? {
-//        return self.removeAtIndex(0)
-//    }
-//}

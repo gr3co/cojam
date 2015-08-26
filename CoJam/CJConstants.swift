@@ -34,3 +34,9 @@ struct CellIdentifiers {
     static let songViewCellIdentifier = "CJSongTableViewCell"
     
 }
+
+struct Notifications {
+    
+    static let hideKeyboardNotification = "hideKeyboard"
+    
+}

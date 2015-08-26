@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="15A234d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0lp-IU-E45">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A262e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0lp-IU-E45">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -11,10 +11,12 @@
         <mutableArray key="Avenir.ttc">
             <string>Avenir-BookOblique</string>
             <string>Avenir-Medium</string>
+            <string>Avenir-Book</string>
+            <string>Avenir-Light</string>
             <string>Avenir-Roman</string>
             <string>Avenir-Medium</string>
             <string>Avenir-Book</string>
-            <string>Avenir-Light</string>
+            <string>Avenir-Book</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -53,20 +55,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clV-GZ-2dK">
+                                <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="U2w-4M-c3z" userLabel="height"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Dne-Ps-qOI" kind="embed" id="5ZA-Sg-qxC"/>
+                                </connections>
+                            </containerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="CA8-rd-G7f">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="114" width="600" height="486"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CJRoomListTableCell" rowHeight="80" id="PFp-Eb-o5c" customClass="CJRoomListTableCell" customModule="CoJam" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="113.5" width="600" height="80"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PFp-Eb-o5c" id="d0S-yq-aoC">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X people currently jamming" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYg-ou-X3M">
-                                                    <rect key="frame" x="63.5" y="40" width="487.5" height="23.5"/>
+                                                    <rect key="frame" x="63" y="40" width="487.5" height="23.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -119,9 +131,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CA8-rd-G7f" firstAttribute="leading" secondItem="1aT-N6-LcP" secondAttribute="leading" id="CHv-8N-Ds9"/>
-                            <constraint firstItem="5Gp-6P-4vc" firstAttribute="top" secondItem="CA8-rd-G7f" secondAttribute="top" id="NU5-kN-lec"/>
+                            <constraint firstAttribute="trailing" secondItem="clV-GZ-2dK" secondAttribute="trailing" id="R7Q-7O-pbJ"/>
                             <constraint firstItem="l69-I7-AtF" firstAttribute="top" secondItem="CA8-rd-G7f" secondAttribute="bottom" id="af1-wh-koJ"/>
+                            <constraint firstItem="clV-GZ-2dK" firstAttribute="top" secondItem="5Gp-6P-4vc" secondAttribute="bottom" id="j30-fl-0nY"/>
                             <constraint firstItem="CA8-rd-G7f" firstAttribute="trailing" secondItem="1aT-N6-LcP" secondAttribute="trailing" id="kTA-eC-4pa"/>
+                            <constraint firstItem="clV-GZ-2dK" firstAttribute="leading" secondItem="1aT-N6-LcP" secondAttribute="leading" id="mcW-3A-R0O"/>
+                            <constraint firstItem="CA8-rd-G7f" firstAttribute="top" secondItem="clV-GZ-2dK" secondAttribute="bottom" id="y8t-td-2Ft"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
@@ -147,10 +162,16 @@
                                 <constraint firstAttribute="centerX" secondItem="dI5-Wc-OaF" secondAttribute="centerX" id="Ylr-kX-Im1"/>
                             </constraints>
                         </view>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="s1k-q5-0oL"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="s1k-q5-0oL">
+                            <connections>
+                                <action selector="newRoomButtonPressed:" destination="nY5-xH-wgV" id="pvv-yN-ciD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="newRoomView" destination="clV-GZ-2dK" id="rhW-mG-xyS"/>
+                        <outlet property="newRoomViewHeightConstraint" destination="U2w-4M-c3z" id="Sns-Df-dgG"/>
                         <outlet property="tableView" destination="CA8-rd-G7f" id="04R-Zg-yEX"/>
                     </connections>
                 </viewController>
@@ -349,6 +370,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4O-7A-CaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1115" y="940"/>
+        </scene>
+        <!--New Room View Controller-->
+        <scene sceneID="EPP-RF-ewA">
+            <objects>
+                <viewController id="Dne-Ps-qOI" customClass="CJNewRoomViewController" customModule="CoJam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nrh-fp-mm9"/>
+                        <viewControllerLayoutGuide type="bottom" id="XjQ-ub-ZrU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4fa-M3-avp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cI-me-Zz2">
+                                <rect key="frame" x="535" y="8.5" width="45" height="33"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createButtonPressed:" destination="Dne-Ps-qOI" eventType="touchUpInside" id="zcn-IU-f0L"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0pe-7Q-gja">
+                                <rect key="frame" x="20" y="10" width="507" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Dne-Ps-qOI" id="KL7-XR-fim"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.22352941179999999" green="0.76078431369999999" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0pe-7Q-gja" firstAttribute="centerY" secondItem="4fa-M3-avp" secondAttribute="centerY" id="2D7-5a-aFg"/>
+                            <constraint firstItem="4cI-me-Zz2" firstAttribute="leading" secondItem="0pe-7Q-gja" secondAttribute="trailing" constant="8" id="NZO-Tr-D0G"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0pe-7Q-gja" secondAttribute="leading" id="PxL-Ae-9DN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4cI-me-Zz2" secondAttribute="trailing" id="d0c-xu-5Fk"/>
+                            <constraint firstItem="4cI-me-Zz2" firstAttribute="centerY" secondItem="4fa-M3-avp" secondAttribute="centerY" id="i9e-fg-x8a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleField" destination="0pe-7Q-gja" id="iVJ-Uj-mJw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tjc-Am-YBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321" y="902"/>
         </scene>
     </scenes>
     <resources>

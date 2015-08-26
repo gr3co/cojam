@@ -9,17 +9,23 @@
 import UIKit
 
 class CJMainViewController: UIViewController, CJSpotifyManagerDelegate,
-UITableViewDelegate, UITableViewDataSource {
+    CJNewRoomViewDelegate, UITableViewDelegate, UITableViewDataSource,
+    UIGestureRecognizerDelegate {
 
+    @IBOutlet weak var newRoomView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var newRoomViewHeightConstraint: NSLayoutConstraint!
     
     var refreshControl : UIRefreshControl!
+    var tapRecognizer : UITapGestureRecognizer!
     let helper = CJSpotifyManager.sharedManager
     
     var myRooms : [CJRoom]?
     var myRoomsQuery : PFQuery!
     var nearbyRooms : [CJRoom]?
     var nearbyRoomsQuery : PFQuery!
+    
+    var showingNewRoomView = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +35,20 @@ UITableViewDelegate, UITableViewDataSource {
         
         helper.delegate = self
         
+        // hide the create room panel
+        newRoomViewHeightConstraint.constant = 0
+        
+        let newRoomVC = childViewControllers[0] as! CJNewRoomViewController
+        newRoomVC.delegate = self
+        
+        
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "refresh", forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
+        
+        tapRecognizer = UITapGestureRecognizer(target: self, action: "tapped:")
+        tapRecognizer.delegate = self
+        self.view.addGestureRecognizer(tapRecognizer)
         
         MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         helper.attemptToReauthenticate { (success: Bool, _) -> Void in
@@ -42,6 +59,7 @@ UITableViewDelegate, UITableViewDataSource {
                 self.showSpotifyAuthController()
             }
         }
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -68,6 +86,26 @@ UITableViewDelegate, UITableViewDataSource {
                     }
                 }
             }
+        }
+    }
+    
+    @IBAction func newRoomButtonPressed(sender: AnyObject) {
+        self.view.layoutIfNeeded()
+        newRoomViewHeightConstraint.constant = 50
+        UIView.animateWithDuration(0.2) {
+            self.view.layoutIfNeeded()
+            self.showingNewRoomView = true
+        }
+    }
+    
+    func hideNewRoomView() {
+        self.view.layoutIfNeeded()
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            Notifications.hideKeyboardNotification, object: nil)
+        newRoomViewHeightConstraint.constant = 0
+        UIView.animateWithDuration(0.2) {
+            self.view.layoutIfNeeded()
+            self.showingNewRoomView = false
         }
     }
     
@@ -144,6 +182,24 @@ UITableViewDelegate, UITableViewDataSource {
         // Do nothing for now
     }
     
+    
+    // MARK: - UIGestureRecognizerDelegate
+    
+    func tapped(sender: AnyObject?) {
+        hideNewRoomView()
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        let point = touch.locationInView(newRoomView)
+        return showingNewRoomView && !CGRectContainsPoint(newRoomView.bounds, point)
+    }
+    
+    // MARK: - CJNewRoomDelegate
+    
+    func newRoomCreated(room: CJRoom) {
+        hideNewRoomView()
+        refresh()
+    }
     
 }
 
