@@ -14,7 +14,7 @@
 		A82EB9A91B6574F800952C76 /* CJLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82EB9A81B6574F800952C76 /* CJLaunchScreen.xib */; };
 		A82EB9AD1B65837C00952C76 /* CJMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9AC1B65837C00952C76 /* CJMainViewController.swift */; };
 		A82EB9AF1B65AA5E00952C76 /* CJSpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EB9AE1B65AA5E00952C76 /* CJSpotifyManager.swift */; };
-		A82EDBFC1B8E38EC002EC67A /* CJNewRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EDBFB1B8E38EC002EC67A /* CJNewRoomViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A82EDBFC1B8E38EC002EC67A /* CJNewRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EDBFB1B8E38EC002EC67A /* CJNewRoomViewController.swift */; };
 		A82F91CC1AF31C6200C1E25A /* CJSearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F91CB1AF31C6200C1E25A /* CJSearchResultTableViewCell.m */; };
 		A86C0B101B65ABB40097E873 /* CJUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86C0B0F1B65ABB40097E873 /* CJUtils.swift */; };
 		A8AD44961AE9D00900E6F060 /* CJColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD44951AE9D00900E6F060 /* CJColors.m */; };
